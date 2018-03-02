@@ -30,7 +30,7 @@ understanding how the build farm is put together and works:
     * See Private Repos for JCK related test repos
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
-    * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for managing **TODO** 
+    * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for pulling the GitHub releases API into the website 
 
 ### Release AdoptOpenJDK binaries
 
