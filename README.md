@@ -27,7 +27,7 @@ understanding how the build farm is put together and works:
 * [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Code and instructions for testing Adopt OpenJDK Binaries
     * [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) - Code and instructions for load, app, perf etc. testing Adopt OpenJDK Binaries
     * [openjdk-stf](https://github.com/AdoptOpenJDK/openjdk-stf) - The System Test Framework for executing [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests)
-    * See Private Repos for JCK related test repos
+    * See [Private Repos](https://github.com/AdoptOpenJDK/TSC#private-repos) for JCK related test repos
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
     * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for pulling the GitHub releases API into the website 
