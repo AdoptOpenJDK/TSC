@@ -16,7 +16,8 @@ TBA - Diagrams to come
 
 ## Dependant Projects
 These projects are located in the following repositories in rough order of importance with regards to 
-understanding how the build farm is put together and works:
+understanding how the build farm is put together and works.  Each repository maintains its own set of issues, pull requests and 
+documentation:
 
 * [Technical Steering Committee (TSC)](https://github.com/AdoptOpenJDK/TSC) - The Technical Steering Committee and Knowledge Base starting point
 * [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts
