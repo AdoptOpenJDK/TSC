@@ -20,7 +20,7 @@ Requests.  Although straight out Pull Requests are welcome, we prefer that you:
  1. Drop a message in the _getopenjdk_ channel to discuss the issue
  1. Make the documentation change and then submit a Pull Request
  
-The pull request will then reviewed and merged as appropriate
+The pull request will then be reviewed and merged as appropriate
 
 # How to Contribute to AdoptOpenJDK
 

@@ -2,8 +2,7 @@
 
 ## Contribution
 
-We welcome any contributions big or small from experienced OpenJDK folks to those who are brand new to software projects! 
-
+We welcome any contributions big or small from experienced OpenJDK folks to those who are brand new to software projects!
 
 To start, make sure you sign up to the [AdoptOpenJDK Slack](https://adoptopenjdk.net/slack.html), say hello and please read 
 the [Contribution Guide](https://github.com/AdoptOpenJDK/TSC/CONTRIBUTING.md).
@@ -15,8 +14,8 @@ the [Contribution Guide](https://github.com/AdoptOpenJDK/TSC/CONTRIBUTING.md).
 TBA - Diagrams to come
 
 ## Dependant Projects
-These projects are located in the following repositories in rough order of importance with regards to 
-understanding how the build farm is put together and works.  Each repository maintains its own set of issues, pull requests and 
+These projects are located in the following repositories in rough order of importance with regards to understanding how 
+the build farm is put together and works.  Each repository maintains its own set of issues, pull requests and 
 documentation:
 
 * [Technical Steering Committee (TSC)](https://github.com/AdoptOpenJDK/TSC) - The Technical Steering Committee and Knowledge Base starting point
@@ -28,7 +27,7 @@ documentation:
 * [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Code and instructions for testing Adopt OpenJDK Binaries
     * [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) - Code and instructions for load, app, perf etc. testing Adopt OpenJDK Binaries
     * [openjdk-stf](https://github.com/AdoptOpenJDK/openjdk-stf) - The System Test Framework for executing [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests)
-    * See Private Repos for JCK related test repos
+    * See [Private Repos](https://github.com/AdoptOpenJDK/TSC#private-repos) for JCK related test repos
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
     * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for pulling the GitHub releases API into the website 
@@ -104,7 +103,6 @@ at their own discretion.
 * No single company can occupy more than 1/3 seats on the TSC
 * The appointing of TSC members occurs on an annual basis and is based on a meritocracy. 
 * Candidates with the intention of becoming a member of the TSC should briefly outline where they'd like to see the project going - all in a transparent manner that is available to the public.
-
 
 Thanks!
 The AdoptOpenJDK Community.
