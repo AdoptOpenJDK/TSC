@@ -92,8 +92,15 @@ repo for details.
 [Supported Platforms](https://docs.google.com/spreadsheets/d/1T_sYpMe1y2cSdiP83HA2VWnTH6B-Nbl3ppss0gEpACc/edit?usp=sharing). The Jenkins leader 
 sends the build jobs to the Jenkins followers based on a tagging system configured in the Jenkins jobs, e.g. `centos6&&x64&&build`. See 
 [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) and [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
-    1. **Nightly Builds are distributed** - TODO 
-    1. **Release Builds are distributed** - TODO
+    1. **Jenkins Pipelines Deploy Binaries** - Our [Pipelines](https://ci.adoptopenjdk.net/view/Pipelines/) take the binaries that have been built and uses 
+    the [OpenJDK Release Tool](https://ci.adoptopenjdk.net/view/Tooling/job/openjdk_release_tool/) from the 
+    [openjdk-webiste-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) project in order to deploy them to the various nightly: 
+    ([openjdk8-nightly](https://github.com/AdoptOpenJDK/openjdk8-nightly/), [openjdk8-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/), [openjdk9-nightly](https://github.com/AdoptOpenJDK/openjdk9-nightly/), 
+    [openjdk9-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/), [openjdk10-nightly](https://github.com/AdoptOpenJDK/openjdk10-nightly/), 
+    [openjdk10-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/)) and release: ([openjdk8-releases](https://github.com/AdoptOpenJDK/openjdk8-releases/), 
+    [openjdk8-openj9-releases](https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/), [openjdk9-releases](https://github.com/AdoptOpenJDK/openjdk9-releases/), 
+    [openjdk9-openj9-releases](https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/), [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/), 
+    [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/)) repos.
 1. **Hosts are allocated for testing** - [Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the  
 [Supported Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader 
 sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and 
