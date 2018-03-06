@@ -81,31 +81,29 @@ TBA - Diagrams to come
 
 The workflow to get OpenJDK source code and make professionally tested binaries for a wide variety of variants and platforms to the public is as follows:
 
-1. **GitHub Mirror** - GitHub mirrors of OpenJDK forests are created in the AdoptOpenJDK org. For example:  
-[openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), 
+1. **GitHub Mirror** - GitHub mirrors of OpenJDK forests are created in the AdoptOpenJDK org. For example: [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), 
 [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9), 
-[openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10). 
-Please open an [openjdk-build issue](https://github.com/AdoptOpenJDK/openjdk-build/issues) if you'd like a new variant added.
-1. **git-hg updates clones** - Our Jenkins [CI leader](https://ci.adoptopenjdk.net/) runs [git-hg jobs](https://ci.adoptopenjdk.net/view/git-hg/) to regularly 
-update those various clones of OpenJDK forests. See the [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) repo for the code and instructions.
-1. **Hosts are allocated for building** - Builds are run on the 
+[openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10). Please open an [openjdk-build issue](https://github.com/AdoptOpenJDK/openjdk-build/issues) and an 
+[openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues) if you'd like a new variant added.
+1. **git-hg updates clones** - Our Jenkins CI runs [git-hg jobs](https://ci.adoptopenjdk.net/view/git-hg/) to regularly 
+update those various clones of OpenJDK forests. See their job configurations in Jenkins and the [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) 
+repo for details.
+1. **Builds are run** - [Builds](https://ci.adoptopenjdk.net/) are run on the 
 [Supported Platforms](https://docs.google.com/spreadsheets/d/1T_sYpMe1y2cSdiP83HA2VWnTH6B-Nbl3ppss0gEpACc/edit?usp=sharing). The Jenkins leader 
- sends the build jobs to the jenkins followers based on a tagging system. See [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) and 
- [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
-    1. **Nightly Builds are run** - The build scripts from [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) are executed and successful binaries 
-    are uploaded to TODO 
-    1. **Release Builds are run** - The build scripts from [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) are executed and successful binaries 
-    are uploaded to TODO
-1. **Hosts are allocated for testing** - Tests are run on the  
+sends the build jobs to the Jenkins followers based on a tagging system configured in the Jenkins jobs, e.g. `centos6&&x64&&build`. See 
+[openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) and [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
+    1. **Nightly Builds are distributed** - TODO 
+    1. **Release Builds are distributed** - TODO
+1. **Hosts are allocated for testing** - [Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the  
 [Supported Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader 
-sends the test jobs to the jenkins followers based on a tagging system. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and 
+sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and 
 [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
     1. **Builds are tested** - The tests in [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) are executed and tests results are posted to TODO.  
     Tests include, but are not limited to the jtreg tests that come with OpenJDK itself.
-    1. **Builds are system tested** - The tests from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) are executed and test results 
-    are posted to TODO 
-    1. **Builds are TCK tested** - TCK tests are executed and success / failure is reported to TODO.  Note that internal details cannot be disseminated to the 
-    public due to the TCK licensing agreement. 
+    1. **Builds are system tested** - [System Tests](https://ci.adoptopenjdk.net/view/System%20tests/) 
+    from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) are executed and test results are posted to TODO 
+    1. **Builds are (J)TCK tested** - TCK (JCK) tests are executed and success / failure is reported to TODO.  Note that internal details cannot be disseminated 
+    to the public due to the TCK licensing agreement. 
 1. **Binaries avaialbe for Download** - Binaries are made available for download via the [website](https://www.adoptopenjdk.net) 
 and [api](https://api.adoptopenjdk.net) gateway. **NOTE** Future versions of this workflow will show the status of testing and meta data about how the binary 
 was built. See [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) and 
