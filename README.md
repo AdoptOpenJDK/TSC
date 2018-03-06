@@ -11,7 +11,15 @@ the [Contribution Guide](https://github.com/AdoptOpenJDK/TSC/CONTRIBUTING.md).
 
 ## Overview
 
-TBA - Diagrams to come
+The AdoptOpenJDK Build Farm is three things:
+
+1. **Infrastructure as Code** - To host, build, test and deploy variants of [OpenJDK](http://openjdk.java.net) aka Java! 
+This infrastructure as code is designed to be usable by any person or organisation wishing to build a derivative 
+build farm or parts of one.
+1. **Professionally built OpenJDK binaries** - A place for end users to download professionally built and tested OpenJDK binaries.
+1. **A Community of builders** - A place where those who build and test OpenJDK come together to share common code and practices.
+
+See our [https://www.adoptopenjdk.net](https://www.adoptopenjdk.net) for in depth details of the motivation, who's involved, the sponsors and much more!
 
 ## Dependant Projects
 These projects are located in the following repositories in rough order of importance with regards to understanding how 
@@ -21,11 +29,11 @@ documentation:
 * [Technical Steering Committee (TSC)](https://github.com/AdoptOpenJDK/TSC) - The Technical Steering Committee and Knowledge Base starting point
 * [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts
 * [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) - Code and instructions for building Adopt OpenJDK Binaries
-    * [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) - Scripts for creating Docker images of OpenJDK binaries.
+    * [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) - Scripts for creating Docker images of OpenJDK binaries
     * [openjdk-installer](https://github.com/AdoptOpenJDK/openjdk-installer) - Installer files for creating platform packaged OpenJDK binaries
 
 * [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Code and instructions for testing Adopt OpenJDK Binaries
-    * [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) - Code and instructions for load, app, perf etc. testing Adopt OpenJDK Binaries
+    * [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) - Code and instructions for load, app, performance testing AdoptOpenJDK Binaries
     * [openjdk-stf](https://github.com/AdoptOpenJDK/openjdk-stf) - The System Test Framework for executing [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests)
     * See [Private Repos](https://github.com/AdoptOpenJDK/TSC#private-repos) for JCK related test repos
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
@@ -67,12 +75,49 @@ Due to security or licensing concerns the following repos are private.  Please r
 * [JCK-results](https://github.com/AdoptOpenJDK/JCK-results) - for storing JCK results
 * [openjdk-website-staging](https://github.com/AdoptOpenJDK/openjdk-staging-webiste) - for staging website PR's
 
+## Workflow
+
+TBA - Diagrams to come
+
+The workflow to get OpenJDK source code and make professionally tested binaries for a wide variety of variants and platforms to the public is as follows:
+
+1. **GitHub Mirror** - GitHub mirrors of OpenJDK forests are created in the AdoptOpenJDK org. For example:  
+[openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), 
+[openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9), 
+[openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10). 
+Please open an [openjdk-build issue](https://github.com/AdoptOpenJDK/openjdk-build/issues) if you'd like a new variant added.
+1. **git-hg updates clones** - Our Jenkins [CI leader](https://ci.adoptopenjdk.net/) runs [git-hg jobs](https://ci.adoptopenjdk.net/view/git-hg/) to regularly 
+update those various clones of OpenJDK forests. See the [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) repo for the code and instructions.
+1. **Hosts are allocated for building** - Builds are run on the 
+[Supported Platforms](https://docs.google.com/spreadsheets/d/1T_sYpMe1y2cSdiP83HA2VWnTH6B-Nbl3ppss0gEpACc/edit?usp=sharing). The Jenkins leader 
+ sends the build jobs to the jenkins followers based on a tagging system. See [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) and 
+ [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
+    1. **Nightly Builds are run** - The build scripts from [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) are executed and successful binaries 
+    are uploaded to TODO 
+    1. **Release Builds are run** - The build scripts from [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) are executed and successful binaries 
+    are uploaded to TODO
+1. **Hosts are allocated for testing** - Tests are run on the  
+[Supported Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader 
+sends the test jobs to the jenkins followers based on a tagging system. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and 
+[openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
+    1. **Builds are tested** - The tests in [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) are executed and tests results are posted to TODO.  
+    Tests include, but are not limited to the jtreg tests that come with OpenJDK itself.
+    1. **Builds are system tested** - The tests from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) are executed and test results 
+    are posted to TODO 
+    1. **Builds are TCK tested** - TCK tests are executed and success / failure is reported to TODO.  Note that internal details cannot be disseminated to the 
+    public due to the TCK licensing agreement. 
+1. **Binaries avaialbe for Download** - Binaries are made available for download via the [website](https://www.adoptopenjdk.net) 
+and [api](https://api.adoptopenjdk.net) gateway. **NOTE** Future versions of this workflow will show the status of testing and meta data about how the binary 
+was built. See [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) and 
+[openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) projects for more details.
+
 # The TSC
 
 *NOTE* This section is a DRAFT and has not yet been fully discussed or ratified by the AdoptOpenJDK community at large.
 
 ## Proposed List of TSC Responsibilities
-The TSC exercises autonomy in setting up and maintaining procedures, policies, and management and administrative structures as it deems appropriate for the maintenance and operation of these projects and resources.
+The TSC exercises autonomy in setting up and maintaining procedures, policies, and management and administrative structures as it deems appropriate for the 
+maintenance and operation of these projects and resources.
 
 Included in the responsibilities of the TSC are:
 
@@ -102,7 +147,8 @@ at their own discretion.
 ## Proposed Rules for TSC Membership
 * No single company can occupy more than 1/3 seats on the TSC
 * The appointing of TSC members occurs on an annual basis and is based on a meritocracy. 
-* Candidates with the intention of becoming a member of the TSC should briefly outline where they'd like to see the project going - all in a transparent manner that is available to the public.
+* Candidates with the intention of becoming a member of the TSC should briefly outline where they'd like to see the project going - all in a transparent manner 
+that is available to the public.
 
 Thanks!
 The AdoptOpenJDK Community.
