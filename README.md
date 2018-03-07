@@ -13,7 +13,7 @@ the [Contribution Guide](https://github.com/AdoptOpenJDK/TSC/CONTRIBUTING.md).
 
 The AdoptOpenJDK Build Farm is three things:
 
-1. **Infrastructure as Code** - To host, build, test and deploy variants of [OpenJDK](http://openjdk.java.net) aka Java! 
+1. **Infrastructure as Code** - To host, build, test and deploy variants of [OpenJDK](http://openjdk.java.net) (aka Java)! 
 This infrastructure as code is designed to be usable by any person or organisation wishing to build a derivative 
 build farm or parts of one.
 1. **Professionally built OpenJDK binaries** - A place for end users to download professionally built and tested OpenJDK binaries.
@@ -63,6 +63,7 @@ documentation:
 * [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u)
 * [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9) - **TODO** move this to jdk9u
 * [openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10)
+* [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 
 ### Private repos
 
@@ -79,46 +80,84 @@ Due to security or licensing concerns the following repos are private.  Please r
 
 TBA - Diagrams to come
 
-The workflow to get OpenJDK source code and make professionally tested binaries for a wide variety of variants and platforms to the public is as follows:
+The workflow to source, build, test and deploy variants of OpenJDK is as follows.
 
-1. **GitHub Mirror** - GitHub mirrors of OpenJDK forests are created in the AdoptOpenJDK org. For example: [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), 
-[openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9), 
-[openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10). Please open an [openjdk-build issue](https://github.com/AdoptOpenJDK/openjdk-build/issues) and an 
-[openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues) if you'd like a new variant added.
-1. **git-hg updates clones** - Our Jenkins CI runs [git-hg jobs](https://ci.adoptopenjdk.net/view/git-hg/) to regularly 
-update those various clones of OpenJDK forests. See their job configurations in Jenkins and the [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) 
-repo for details.
+### Get the Source Code
+
+We source variants and versions of OpenJDK from a variety of source repositories:
+
+1. **OpenJDK HotSpot Mirrors** - GitHub mirrors of OpenJDK forests are created in the AdoptOpenJDK org. For example: 
+[openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9), 
+[openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10). Please open an [openjdk-build issue](https://github.com/AdoptOpenJDK/openjdk-build/issues) and 
+an [openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues) if you'd like a new variant added.
+    1. **git-hg Jobs Update Mirrors** - Our Jenkins CI runs [git-hg jobs](https://ci.adoptopenjdk.net/view/git-hg/) to regularly 
+        update those various clones of OpenJDK forests. See their job configurations in Jenkins and the [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) 
+        repo for details.
+1. **OpenJDK OpenJ9** - Eclipse OpenJ9 source is built from IBM Runtimes, e.g. [openj9-openjdk-jdk8](https://github.com/ibmruntimes/openj9-openjdk-jdk8), 
+     [openj9-openjdk-jdk9](https://github.com/ibmruntimes/openj9-openjdk-jdk9)
+1. **OpenJDK SAP** - SAP source is built from TODO
+1. **OpenJDK OpenJFX** - GitHub mirror of OpenJDK JFX lives at AdoptOpenJDK - [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
+
+# Manage the Branches to Build from
+
+1. **OpenJDK Variant Branches** - Each OpenJDK variant has a canonical branch that is built:  
+    1. **OpenJDK HotSpot** - The `dev` branch of AdoptOpenJDK contains extra patches over and above `master` (which is the exact clone of the OpenJDK forest). 
+    `dev` is used to build AdoptopenjDK binaries
+    1. **OpenJDK OpenJ9** - For `openj9-0.8` branch is used to build OpenJ9 for Java 8 and `openj9` is used to buidl OpenJ9 for Java 9. 
+    1. **OpenJDK SAP** - TODO
+    1. **OpenJDK OpenJFX** - TODO
+    
+### Build, Test and Deploy Pipeline
+
+Our Jenkins [Pipelines](https://ci.adoptopenjdk.net/view/Pipelines/) build binaries and then push them through a test pipeline (**NOTE** Test 
+pipeline is skipped for certain unstable combinations).
+
+**NOTE:** Once the Test jobs have stabilised, the pipeline described below will change so that only tested binarues are released to 
+Nightly and Release repos for consumption by the Website and/Or API.  See [The Quality Bar Discussion](https://github.com/AdoptOpenJDK/openjdk-tests/issues/186) 
+for details.
+
+#### Build
+
 1. **Builds are run** - [Builds](https://ci.adoptopenjdk.net/) are run on the 
 [Supported Platforms](https://docs.google.com/spreadsheets/d/1T_sYpMe1y2cSdiP83HA2VWnTH6B-Nbl3ppss0gEpACc/edit?usp=sharing). The Jenkins leader 
 sends the build jobs to the Jenkins followers based on a tagging system configured in the Jenkins jobs, e.g. `centos6&&x64&&build`. See 
 [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) and [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
-    1. **Jenkins Pipelines Deploy Binaries** - Our [Pipelines](https://ci.adoptopenjdk.net/view/Pipelines/) take the binaries that have been built and uses 
-    the [OpenJDK Release Tool](https://ci.adoptopenjdk.net/view/Tooling/job/openjdk_release_tool/) from the 
-    [openjdk-webiste-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) project in order to deploy them to the various nightly: 
-    ([openjdk8-nightly](https://github.com/AdoptOpenJDK/openjdk8-nightly/), [openjdk8-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/), [openjdk9-nightly](https://github.com/AdoptOpenJDK/openjdk9-nightly/), 
-    [openjdk9-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/), [openjdk10-nightly](https://github.com/AdoptOpenJDK/openjdk10-nightly/), 
-    [openjdk10-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/)) and release: ([openjdk8-releases](https://github.com/AdoptOpenJDK/openjdk8-releases/), 
-    [openjdk8-openj9-releases](https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/), [openjdk9-releases](https://github.com/AdoptOpenJDK/openjdk9-releases/), 
-    [openjdk9-openj9-releases](https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/), [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/), 
-    [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/)) repos.
-1. **Hosts are allocated for testing** - [Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the  
-[Supported Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader 
+
+#### Test
+
+1. **Hosts are allocated for testing** - [Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the [Supported Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader 
 sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and 
 [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
     1. **Builds are tested** - The tests in [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) are executed and tests results are posted to TODO.  
     Tests include, but are not limited to the jtreg tests that come with OpenJDK itself.
     1. **Builds are system tested** - [System Tests](https://ci.adoptopenjdk.net/view/System%20tests/) 
-    from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) are executed and test results are posted to TODO 
+    from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) are executed and test results are posted to TODO
     1. **Builds are (J)TCK tested** - TCK (JCK) tests are executed and success / failure is reported to TODO.  Note that internal details cannot be disseminated 
-    to the public due to the TCK licensing agreement. 
-1. **Binaries avaialbe for Download** - Binaries are made available for download via the [website](https://www.adoptopenjdk.net) 
-and [api](https://api.adoptopenjdk.net) gateway. **NOTE** Future versions of this workflow will show the status of testing and meta data about how the binary 
-was built. See [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) and 
+    to the public due to the TCK licensing agreement.
+
+#### Deploy Binaries
+
+**TODO**: We're missing the SAP and OpenJFK deployments here. 
+ 
+**NOTE** Future versions of this workflow will show the status of testing and meta data about how the binary was built.
+
+1. **Binaries are deployed** - Using the [OpenJDK Release Tool](https://ci.adoptopenjdk.net/view/Tooling/job/openjdk_release_tool/) (from the 
+[openjdk-webiste-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) project) in order to:
+    1. deploy them to the various nightly repos: 
+    ([openjdk8-nightly](https://github.com/AdoptOpenJDK/openjdk8-nightly/), [openjdk8-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/), 
+    [openjdk9-nightly](https://github.com/AdoptOpenJDK/openjdk9-nightly/), [openjdk9-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/), 
+    [openjdk10-nightly](https://github.com/AdoptOpenJDK/openjdk10-nightly/), [openjdk10-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/)) 
+    and release repos: 
+    ([openjdk8-releases](https://github.com/AdoptOpenJDK/openjdk8-releases/), [openjdk8-openj9-releases](https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/), 
+    [openjdk9-releases](https://github.com/AdoptOpenJDK/openjdk9-releases/), [openjdk9-openj9-releases](https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/), 
+    [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/), [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/))     
+1. **Binaries made available** - Binaries are made available for download via the [website](https://www.adoptopenjdk.net) 
+and [api](https://api.adoptopenjdk.net) gateway. See [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) and 
 [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) projects for more details.
 
 # The TSC
 
-*NOTE* This section is a DRAFT and has not yet been fully discussed or ratified by the AdoptOpenJDK community at large.
+**NOTE** This section is a DRAFT and has not yet been fully discussed or ratified by the AdoptOpenJDK community at large.
 
 ## Proposed List of TSC Responsibilities
 The TSC exercises autonomy in setting up and maintaining procedures, policies, and management and administrative structures as it deems appropriate for the 
