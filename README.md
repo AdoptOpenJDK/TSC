@@ -60,6 +60,8 @@ documentation:
 
 ### Clones of OpenJDK Forests 
 
+When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its own patches then we have a clone of that source:
+
 * [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u)
 * [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9) - **TODO** move this to jdk9u
 * [openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10)
