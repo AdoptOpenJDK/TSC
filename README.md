@@ -102,12 +102,12 @@ an [openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infras
 
 ### 2. Manage the Branches to Build from ###
 
-1. **OpenJDK Variant Branches** - Each OpenJDK variant has a canonical branch that is built:  
-    1. **OpenJDK HotSpot** - The `dev` branch of AdoptOpenJDK contains extra patches over and above `master` (which is the exact clone of the OpenJDK forest). 
-    `dev` is used to build AdoptopenjDK binaries
-    1. **OpenJDK OpenJ9** - For `openj9-0.8` branch is used to build OpenJ9 for Java 8 and `openj9` is used to buidl OpenJ9 for Java 9. 
-    1. **OpenJDK SAP** - TODO
-    1. **OpenJDK OpenJFX** - TODO
+Each OpenJDK variant has a canonical branch that is built:  
+1. **OpenJDK HotSpot** - The `dev` branch of AdoptOpenJDK contains extra patches over and above `master` (which is the exact clone of the OpenJDK forest). 
+`dev` is used to build AdoptopenjDK binaries
+1. **OpenJDK OpenJ9** - For `openj9-0.8` branch is used to build OpenJ9 for Java 8 and `openj9` is used to buidl OpenJ9 for Java 9. 
+1. **OpenJDK SAP** - TODO
+1. **OpenJDK OpenJFX** - TODO
     
 ### 3. Build, Test and Deploy Pipeline
 
@@ -120,22 +120,23 @@ for details.
 
 #### 3.1 Build
 
-1. **Builds are run** - [Builds](https://ci.adoptopenjdk.net/) are run on the 
+[Builds](https://ci.adoptopenjdk.net/) are run on the 
 [Supported Platforms](https://docs.google.com/spreadsheets/d/1T_sYpMe1y2cSdiP83HA2VWnTH6B-Nbl3ppss0gEpACc/edit?usp=sharing). The Jenkins leader 
 sends the build jobs to the Jenkins followers based on a tagging system configured in the Jenkins jobs, e.g. `centos6&&x64&&build`. See 
 [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) and [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
 
 #### 3.2 Test
 
-1. **Hosts are allocated for testing** - [Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the [Supported Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader 
+[Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the 
+[Supported Test Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader 
 sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and 
 [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
-    1. **Builds are tested** - The tests in [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) are executed and tests results are posted to TODO.  
-    Tests include, but are not limited to the jtreg tests that come with OpenJDK itself.
-    1. **Builds are system tested** - [System Tests](https://ci.adoptopenjdk.net/view/System%20tests/) 
-    from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) are executed and test results are posted to TODO
-    1. **Builds are (J)TCK tested** - TCK (JCK) tests are executed and success / failure is reported to TODO.  Note that internal details cannot be disseminated 
-    to the public due to the TCK licensing agreement.
+1. **Builds are tested** - The tests in [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) are executed and tests results are posted to TODO.  
+Tests include, but are not limited to the jtreg tests that come with OpenJDK itself.
+1. **Builds are system tested** - [System Tests](https://ci.adoptopenjdk.net/view/System%20tests/) 
+from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) are executed and test results are posted to TODO
+1. **Builds are (J)TCK tested** - TCK (JCK) tests are executed and success / failure is reported to TODO.  Note that internal details cannot be disseminated 
+to the public due to the TCK licensing agreement.
 
 #### 3.3 Deploy Binaries
 
