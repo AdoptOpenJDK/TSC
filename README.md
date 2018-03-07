@@ -118,14 +118,14 @@ pipeline is skipped for certain unstable combinations).
 Nightly and Release repos for consumption by the Website and/Or API.  See [The Quality Bar Discussion](https://github.com/AdoptOpenJDK/openjdk-tests/issues/186) 
 for details.
 
-#### 3.i. Build
+#### 3.1 Build
 
 1. **Builds are run** - [Builds](https://ci.adoptopenjdk.net/) are run on the 
 [Supported Platforms](https://docs.google.com/spreadsheets/d/1T_sYpMe1y2cSdiP83HA2VWnTH6B-Nbl3ppss0gEpACc/edit?usp=sharing). The Jenkins leader 
 sends the build jobs to the Jenkins followers based on a tagging system configured in the Jenkins jobs, e.g. `centos6&&x64&&build`. See 
 [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) and [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
 
-#### 3.ii Test
+#### 3.2 Test
 
 1. **Hosts are allocated for testing** - [Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the [Supported Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader 
 sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and 
@@ -137,7 +137,7 @@ sends the test jobs to the Jenkins followers based on a similar tagging system t
     1. **Builds are (J)TCK tested** - TCK (JCK) tests are executed and success / failure is reported to TODO.  Note that internal details cannot be disseminated 
     to the public due to the TCK licensing agreement.
 
-#### 3.iii Deploy Binaries
+#### 3.3 Deploy Binaries
 
 **TODO**: We're missing the SAP and OpenJFK deployments here. 
  
