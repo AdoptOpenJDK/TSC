@@ -84,7 +84,7 @@ TBA - Diagrams to come
 
 The workflow to source, build, test and deploy variants of OpenJDK is as follows.
 
-### Get the Source Code
+### 1. Get the Source Code
 
 We source variants and versions of OpenJDK from a variety of source repositories:
 
@@ -100,7 +100,7 @@ an [openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infras
 1. **OpenJDK SAP** - SAP source is built from TODO
 1. **OpenJDK OpenJFX** - GitHub mirror of OpenJDK JFX lives at AdoptOpenJDK - [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 
-### Manage the Branches to Build from ###
+### 2. Manage the Branches to Build from ###
 
 1. **OpenJDK Variant Branches** - Each OpenJDK variant has a canonical branch that is built:  
     1. **OpenJDK HotSpot** - The `dev` branch of AdoptOpenJDK contains extra patches over and above `master` (which is the exact clone of the OpenJDK forest). 
@@ -109,7 +109,7 @@ an [openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infras
     1. **OpenJDK SAP** - TODO
     1. **OpenJDK OpenJFX** - TODO
     
-### Build, Test and Deploy Pipeline
+### 3. Build, Test and Deploy Pipeline
 
 Our Jenkins [Pipelines](https://ci.adoptopenjdk.net/view/Pipelines/) build binaries and then push them through a test pipeline (**NOTE** Test 
 pipeline is skipped for certain unstable combinations).
@@ -118,14 +118,14 @@ pipeline is skipped for certain unstable combinations).
 Nightly and Release repos for consumption by the Website and/Or API.  See [The Quality Bar Discussion](https://github.com/AdoptOpenJDK/openjdk-tests/issues/186) 
 for details.
 
-#### Build
+#### 3.i. Build
 
 1. **Builds are run** - [Builds](https://ci.adoptopenjdk.net/) are run on the 
 [Supported Platforms](https://docs.google.com/spreadsheets/d/1T_sYpMe1y2cSdiP83HA2VWnTH6B-Nbl3ppss0gEpACc/edit?usp=sharing). The Jenkins leader 
 sends the build jobs to the Jenkins followers based on a tagging system configured in the Jenkins jobs, e.g. `centos6&&x64&&build`. See 
 [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) and [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
 
-#### Test
+#### 3.ii Test
 
 1. **Hosts are allocated for testing** - [Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the [Supported Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader 
 sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and 
@@ -137,7 +137,7 @@ sends the test jobs to the Jenkins followers based on a similar tagging system t
     1. **Builds are (J)TCK tested** - TCK (JCK) tests are executed and success / failure is reported to TODO.  Note that internal details cannot be disseminated 
     to the public due to the TCK licensing agreement.
 
-#### Deploy Binaries
+#### 3.iii Deploy Binaries
 
 **TODO**: We're missing the SAP and OpenJFK deployments here. 
  
