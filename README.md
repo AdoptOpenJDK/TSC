@@ -100,7 +100,7 @@ an [openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infras
 1. **OpenJDK SAP** - SAP source is built from TODO
 1. **OpenJDK OpenJFX** - GitHub mirror of OpenJDK JFX lives at AdoptOpenJDK - [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 
-# Manage the Branches to Build from
+### Manage the Branches to Build from ###
 
 1. **OpenJDK Variant Branches** - Each OpenJDK variant has a canonical branch that is built:  
     1. **OpenJDK HotSpot** - The `dev` branch of AdoptOpenJDK contains extra patches over and above `master` (which is the exact clone of the OpenJDK forest). 
