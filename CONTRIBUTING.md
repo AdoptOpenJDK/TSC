@@ -28,8 +28,19 @@ If you'd like to get involved in AdoptOpenJDK then we recommend you read the [Kn
 
  1. Sign up to the [AdoptOpenJDK Slack](https://adoptopenjdk.net/slack.html)
  1. Drop a message in the _getopenjdk_ channel and introduce yourself
- 1. Then pick whichever repos / issues that you're interested in working in, each repo contains issues, pull requests 
- and full set of documentation on how to work with that sub project.
+ 1. Join the GitHub org (see below)
+
+## Joining the GitHub Org and Teams
+
+Please raise an [openjdk-TSC issue](https://github.com/AdoptOpenJDK/openjdk-TSC/issues) if you'd like to be added to the 
+AdoptOpenJDK GitHub organisation.
+
+There are some specialist teams within the org:
+ 
+1. Please raise an [openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues) if you'd like to be added to the 
+infrastructure team.
+1. Please raise an [openjdk-TSC issue](https://github.com/AdoptOpenJDK/openjdk-TSC/issues) if you'd like to be added to the 
+JCK team.
 
 Thanks!<br>
 The AdoptOpenJDK Community.

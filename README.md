@@ -94,8 +94,7 @@ We source variants and versions of OpenJDK from a variety of source repositories
 1. **OpenJDK HotSpot Mirrors** - GitHub mirrors of OpenJDK forests are created in the AdoptOpenJDK org. For example: 
 [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9), 
 [openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10), [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber). Please open an 
-[openjdk-build issue](https://github.com/AdoptOpenJDK/openjdk-build/issues) and an 
-[openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues) if you'd like a new variant added.
+[openjdk-TSC issue](https://github.com/AdoptOpenJDK/openjdk-TSC/issues) if you'd like a new variant added.
     1. **git-hg Jobs Update Mirrors** - Our Jenkins CI runs [git-hg jobs](https://ci.adoptopenjdk.net/view/git-hg/) to regularly 
         update those various clones of OpenJDK forests. See their job configurations in Jenkins and the [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) 
         repo for details.
