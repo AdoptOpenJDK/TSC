@@ -38,6 +38,7 @@ documentation:
     * See [Private Repos](https://github.com/AdoptOpenJDK/TSC#private-repos) for JCK related test repos
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
+        * [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) - A Java client for our API
     * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for pulling the GitHub releases API into the website 
 
 ### Release AdoptOpenJDK binaries
@@ -57,6 +58,7 @@ documentation:
 * [openjdk9-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with Eclipse OpenJ9
 * [openjdk10-nightly](https://github.com/AdoptOpenJDK/openjdk10-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with HotSpot
 * [openjdk10-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with Eclipse OpenJ9
+* [openjdk-amber-nightly](https://github.com/AdoptOpenJDK/openjdk-amber-nightly) - AdoptOpenJDK project Amber nightlies
 
 ### Clones of OpenJDK Forests 
 
@@ -66,6 +68,7 @@ When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its
 * [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9) - **TODO** move this to jdk9u
 * [openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10)
 * [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
+* [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber)
 
 ### Private repos
 
@@ -90,14 +93,15 @@ We source variants and versions of OpenJDK from a variety of source repositories
 
 1. **OpenJDK HotSpot Mirrors** - GitHub mirrors of OpenJDK forests are created in the AdoptOpenJDK org. For example: 
 [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9), 
-[openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10). Please open an [openjdk-build issue](https://github.com/AdoptOpenJDK/openjdk-build/issues) and 
-an [openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues) if you'd like a new variant added.
+[openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10), [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber). Please open an 
+[openjdk-build issue](https://github.com/AdoptOpenJDK/openjdk-build/issues) and an 
+[openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues) if you'd like a new variant added.
     1. **git-hg Jobs Update Mirrors** - Our Jenkins CI runs [git-hg jobs](https://ci.adoptopenjdk.net/view/git-hg/) to regularly 
         update those various clones of OpenJDK forests. See their job configurations in Jenkins and the [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) 
         repo for details.
 1. **OpenJDK OpenJ9** - Eclipse OpenJ9 source is built from IBM Runtimes, e.g. [openj9-openjdk-jdk8](https://github.com/ibmruntimes/openj9-openjdk-jdk8), 
      [openj9-openjdk-jdk9](https://github.com/ibmruntimes/openj9-openjdk-jdk9)
-1. **OpenJDK SAP** - SAP source is built from TODO
+1. **OpenJDK SAP** - SAP source is built from e.g. [openjdk-sap-jdk10](https://github.com/SAP/SapMachine)
 1. **OpenJDK OpenJFX** - GitHub mirror of OpenJDK JFX lives at AdoptOpenJDK - [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 
 ### 2. Manage the Branches to Build from ###
@@ -105,8 +109,8 @@ an [openjdk-infrastructure issue](https://github.com/AdoptOpenJDK/openjdk-infras
 Each OpenJDK variant has a canonical branch that is built:  
 1. **OpenJDK HotSpot** - The `dev` branch of AdoptOpenJDK contains extra patches over and above `master` (which is the exact clone of the OpenJDK forest). 
 `dev` is used to build AdoptopenjDK binaries
-1. **OpenJDK OpenJ9** - For `openj9-0.8` branch is used to build OpenJ9 for Java 8 and `openj9` is used to buidl OpenJ9 for Java 9. 
-1. **OpenJDK SAP** - TODO
+1. **OpenJDK OpenJ9** - The `openj9-0.8` branch is used to build OpenJ9 for Java 8 and `openj9` is used to build OpenJ9 for Java 9. 
+1. **OpenJDK SAP** - The `sapmachine` branch is used to build SAP for Java 10
 1. **OpenJDK OpenJFX** - TODO
     
 ### 3. Build, Test and Deploy Pipeline
@@ -155,8 +159,9 @@ to the public due to the TCK licensing agreement.
     [openjdk9-releases](https://github.com/AdoptOpenJDK/openjdk9-releases/), [openjdk9-openj9-releases](https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/), 
     [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/), [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/))     
 1. **Binaries made available** - Binaries are made available for download via the [website](https://www.adoptopenjdk.net) 
-and [api](https://api.adoptopenjdk.net) gateway. See [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) and 
-[openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) projects for more details.
+and [api](https://api.adoptopenjdk.net) gateway. See [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website),  
+[openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) and [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) projects 
+for more details.
 
 # The TSC
 
