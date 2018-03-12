@@ -89,7 +89,9 @@ The workflow to source, build, test and deploy variants of OpenJDK is as follows
 
 ### 1. Get the Source Code
 
-We source variants and versions of OpenJDK from a variety of source repositories:
+We source variants and versions of OpenJDK from a variety of source repositories. 
+[Add a new build variant](https://github.com/AdoptOpenJDK/TSC/wiki/Adding-a-new-build-variant) describes the typical work flow of 
+getting a new variant up and running.
 
 1. **OpenJDK HotSpot Mirrors** - GitHub mirrors of OpenJDK forests are created in the AdoptOpenJDK org. For example: 
 [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9), 
