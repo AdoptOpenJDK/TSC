@@ -32,7 +32,7 @@ documentation:
 * [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) - Code and instructions for building Adopt OpenJDK Binaries
     * [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) - Scripts for creating Docker images of OpenJDK binaries
     * [openjdk-installer](https://github.com/AdoptOpenJDK/openjdk-installer) - Installer files for creating platform packaged OpenJDK binaries
-
+    * [jdk-api-diff](https://github.com/AdoptOpenJDK/jdk-api-diff) - A diff tool that reports what API changes there are between versions
 * [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Code and instructions for testing Adopt OpenJDK Binaries
     * [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) - Code and instructions for load, app, performance testing AdoptOpenJDK Binaries
     * [openjdk-stf](https://github.com/AdoptOpenJDK/openjdk-stf) - The System Test Framework for executing [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests)
@@ -92,7 +92,8 @@ The workflow to source, build, test and deploy variants of OpenJDK is as follows
 
 We source variants and versions of OpenJDK from a variety of source repositories. 
 [Add a new build variant](https://github.com/AdoptOpenJDK/TSC/wiki/Adding-a-new-build-variant) describes the typical work flow of 
-getting a new variant up and running.
+getting a new variant up and running.  Please also see [Platform Costs](https://github.com/AdoptOpenJDK/TSC/PLATFORM_COSTS.md) as 
+variants with high impact on the build farm will require funding.
 
 1. **OpenJDK HotSpot Mirrors** - GitHub mirrors of OpenJDK forests are created in the AdoptOpenJDK org. For example: 
 [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9), 
@@ -110,15 +111,15 @@ getting a new variant up and running.
 
 Each OpenJDK variant has a canonical branch that is built:  
 1. **OpenJDK HotSpot** - The `dev` branch of AdoptOpenJDK contains extra patches over and above `master` (which is the exact clone of the OpenJDK forest). 
-`dev` is used to build AdoptopenjDK binaries
-1. **OpenJDK OpenJ9** - The `openj9-0.8` branch is used to build OpenJ9 for Java 8 and `openj9` is used to build OpenJ9 for Java 9. 
+`dev` is used to build AdoptOpenjDK binaries
+1. **OpenJDK OpenJ9** - Branches such as `openj9-0.8` are used to build OpenJ9 Releases for Java 8 and `openj9` is used to build OpenJ9 for Java 9. 
 1. **OpenJDK SAP** - The `sapmachine` branch is used to build SAP for Java 10
 1. **OpenJDK OpenJFX** - TODO
     
 ### 3. Build, Test and Deploy Pipeline
 
-Our Jenkins [Pipelines](https://ci.adoptopenjdk.net/view/Pipelines/) build binaries and then push them through a test pipeline (**NOTE** Test 
-pipeline is skipped for certain unstable combinations).
+Our Jenkins [Pipelines](https://ci.adoptopenjdk.net/view/Pipelines/) ([source code](https://github.com/AdoptOpenJDK/openjdk-build/tree/master/pipelines)) build 
+binaries and then push them through a test pipeline (**NOTE** Test pipeline is skipped for certain unstable combinations).
 
 **NOTE:** Once the Test jobs have stabilised, the pipeline described below will change so that only tested binarues are released to 
 Nightly and Release repos for consumption by the Website and/Or API.  See [The Quality Bar Discussion](https://github.com/AdoptOpenJDK/openjdk-tests/issues/186) 
