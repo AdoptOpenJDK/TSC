@@ -77,6 +77,7 @@ Due to security or licensing concerns the following repos are private.  Please r
  [Infrastructure Project](https://github.com/AdoptOpenJDK/openjdk-infrastructure) if you think you need access.
 
 * [secrets](https://github.com/AdoptOpenJDK/secrets) - For holding some secrets
+* [JCK](https://github.com/AdoptOpenJDK/JCK) - documentation, issues and materials that running a JCK (independent of version)
 * [JCK8](https://github.com/AdoptOpenJDK/JCK8) - code and documentation for running JCK8
 * [JCK9](https://github.com/AdoptOpenJDK/JCK9) - code and documentation for running JCK9+
 * [JCK-results](https://github.com/AdoptOpenJDK/JCK-results) - for storing JCK results
