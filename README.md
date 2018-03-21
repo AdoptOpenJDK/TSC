@@ -79,7 +79,8 @@ Due to security or licensing concerns the following repos are private.  Please r
 * [secrets](https://github.com/AdoptOpenJDK/secrets) - For holding some secrets
 * [JCK](https://github.com/AdoptOpenJDK/JCK) - documentation, issues and materials that running a JCK (independent of version)
 * [JCK8](https://github.com/AdoptOpenJDK/JCK8) - code and documentation for running JCK8
-* [JCK9](https://github.com/AdoptOpenJDK/JCK9) - code and documentation for running JCK9+
+* [JCK9](https://github.com/AdoptOpenJDK/JCK9) - code and documentation for running JCK9
+* [JCK10](https://github.com/AdoptOpenJDK/JCK10) - code and documentation for running JCK10
 * [JCK-results](https://github.com/AdoptOpenJDK/JCK-results) - for storing JCK results
 * [openjdk-website-staging](https://github.com/AdoptOpenJDK/openjdk-staging-webiste) - for staging website PR's
 
