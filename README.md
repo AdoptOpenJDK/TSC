@@ -13,7 +13,7 @@ the [Contribution Guide](https://github.com/AdoptOpenJDK/TSC/CONTRIBUTING.md).
 
 TBA - Diagrams to come
 
-## Dependant Projects
+## Dependent Projects
 These projects are located in the following repositories in rough order of importance with regards to understanding how 
 the build farm is put together and works.  Each repository maintains its own set of issues, pull requests and 
 documentation:
@@ -24,9 +24,9 @@ documentation:
     * [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) - Scripts for creating Docker images of OpenJDK binaries.
     * [openjdk-installer](https://github.com/AdoptOpenJDK/openjdk-installer) - Installer files for creating platform packaged OpenJDK binaries
 
-* [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Code and instructions for testing Adopt OpenJDK Binaries
-    * [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) - Code and instructions for load, app, perf etc. testing Adopt OpenJDK Binaries
-    * [openjdk-stf](https://github.com/AdoptOpenJDK/openjdk-stf) - The System Test Framework for executing [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests)
+* [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Instructions and CI automation scripts for all AdoptOpenJDK testing, code for app, performance and regression testing Adopt OpenJDK Binaries
+    * [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest) - Code and instructions for load and system testing AdoptOpenJDK Binaries
+    * [openjdk-stf](https://github.com/AdoptOpenJDK/openjdk-stf) - The System Test Framework, a harness for executing [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest)
     * See [Private Repos](https://github.com/AdoptOpenJDK/TSC#private-repos) for JCK related test repos
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
@@ -91,7 +91,7 @@ TSC members can nominate new members at any time. Candidates for membership tend
 who have a competency for community management and a high tolerance and patience for process
 minutiae as the TSC delegates most of its responsibilities to other teams.
 
-Every Dependant Project not currently incubating can appoint someone to the TSC who they elect
+Every Dependent Project not currently incubating can appoint someone to the TSC who they elect
 at their own discretion.
 
 ### Current Members
