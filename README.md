@@ -5,7 +5,7 @@
 We welcome any contributions big or small from experienced OpenJDK folks to those who are brand new to software projects!
 
 To start, make sure you sign up to the [AdoptOpenJDK Slack](https://adoptopenjdk.net/slack.html), say hello and please read 
-the [Contribution Guide](https://github.com/AdoptOpenJDK/TSC/CONTRIBUTING.md).
+the [Contribution Guide](CONTRIBUTING.md).
 
 # Knowledge Base
 
