@@ -24,7 +24,7 @@ The pull request will then be reviewed and merged as appropriate
 
 # How to Contribute to AdoptOpenJDK
 
-If you'd like to get involved in AdoptOpenJDK then we recommend you read the [Knowledge Base (TODO)](TBA) and then:
+If you'd like to get involved in AdoptOpenJDK then we recommend you read the [Knowledge Base](README.md) and then:
 
  1. Sign up to the [AdoptOpenJDK Slack](https://adoptopenjdk.net/slack.html)
  1. Drop a message in the _getopenjdk_ channel and introduce yourself
