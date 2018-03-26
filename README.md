@@ -5,7 +5,7 @@
 We welcome any contributions big or small from experienced OpenJDK folks to those who are brand new to software projects!
 
 To start, make sure you sign up to the [AdoptOpenJDK Slack](https://adoptopenjdk.net/slack.html), say hello and please read 
-the [Contribution Guide](https://github.com/AdoptOpenJDK/TSC/CONTRIBUTING.md).
+the [Contribution Guide](CONTRIBUTING.md).
 
 # Knowledge Base
 
@@ -21,7 +21,7 @@ build farm or parts of one.
 
 See our [https://www.adoptopenjdk.net](https://www.adoptopenjdk.net) for in depth details of the motivation, who's involved, the sponsors and much more!
 
-## Dependant Projects
+## Dependent Projects
 These projects are located in the following repositories in rough order of importance with regards to understanding how 
 the build farm is put together and works.  Each repository maintains its own set of issues, pull requests and 
 documentation:
@@ -33,9 +33,9 @@ documentation:
     * [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) - Scripts for creating Docker images of OpenJDK binaries
     * [openjdk-installer](https://github.com/AdoptOpenJDK/openjdk-installer) - Installer files for creating platform packaged OpenJDK binaries
     * [jdk-api-diff](https://github.com/AdoptOpenJDK/jdk-api-diff) - A diff tool that reports what API changes there are between versions
-* [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Code and instructions for testing Adopt OpenJDK Binaries
-    * [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) - Code and instructions for load, app, performance testing AdoptOpenJDK Binaries
-    * [openjdk-stf](https://github.com/AdoptOpenJDK/openjdk-stf) - The System Test Framework for executing [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests)
+* [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Instructions for all testing at AdoptOpenJDK, code for app, performance and regression testing of AdoptOpenJDK Binaries and CI test automation scripts
+    * [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest) - Code and instructions for system and load testing AdoptOpenJDK Binaries
+    * [openjdk-stf](https://github.com/AdoptOpenJDK/openjdk-stf) - The System Test Framework, a harness for executing [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest)
     * See [Private Repos](https://github.com/AdoptOpenJDK/TSC#private-repos) for JCK related test repos
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
@@ -193,7 +193,7 @@ TSC members can nominate new members at any time. Candidates for membership tend
 who have a competency for community management and a high tolerance and patience for process
 minutiae as the TSC delegates most of its responsibilities to other teams.
 
-Every Dependant Project not currently incubating can appoint someone to the TSC who they elect
+Every Dependent Project not currently incubating can appoint someone to the TSC who they elect
 at their own discretion.
 
 ### Current Members
