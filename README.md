@@ -29,7 +29,9 @@ documentation:
 ![Dependent Projects](images/Adopt_Build_Farm_Repo_Relationships.png)
 
 * [Technical Steering Committee (TSC)](https://github.com/AdoptOpenJDK/TSC) - The Technical Steering Committee and Knowledge Base starting point
-  * [moderation](https://github.com/AdoptOpenJDK/moderation) - A private repo for moderation requests
+  * [security](https://github.com/AdoptOpenJDK/security) - A private repo for the security team
+    * [moderation](https://github.com/AdoptOpenJDK/moderation) - A private repo for moderation requests
+    * [secrets](https://github.com/AdoptOpenJDK/secrets) - A private repo for secrets
 * [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts
     * [openjdk-jenkins-helper](https://github.com/AdoptOpenJDK/openjdk-jenkins-helper) - A auto label generator for Jenkins
 * [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) - Code and instructions for building Adopt OpenJDK Binaries
