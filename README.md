@@ -24,9 +24,15 @@ See our [https://www.adoptopenjdk.net](https://www.adoptopenjdk.net) for in dept
 ## Dependent Projects
 These projects are located in the following repositories in rough order of importance with regards to understanding how 
 the build farm is put together and works.  Each repository maintains its own set of issues, pull requests and 
-documentation:
+documentation (edit the [Image Source](https://docs.google.com/drawings/d/1daX4YkvpyHOy0aaA80ECC2vKTjOVIUATKiJM4QOw7hI/edit) at Google and export to make 
+changes.)
+
+![Dependent Projects](images/Adopt_Build_Farm_Repo_Relationships.png) 
 
 * [Technical Steering Committee (TSC)](https://github.com/AdoptOpenJDK/TSC) - The Technical Steering Committee and Knowledge Base starting point
+  * [security](https://github.com/AdoptOpenJDK/security) - A private repo for the security team
+    * [moderation](https://github.com/AdoptOpenJDK/moderation) - A private repo for moderation requests
+    * [secrets](https://github.com/AdoptOpenJDK/secrets) - A private repo for secrets
 * [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts
     * [openjdk-jenkins-helper](https://github.com/AdoptOpenJDK/openjdk-jenkins-helper) - A auto label generator for Jenkins
 * [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) - Code and instructions for building Adopt OpenJDK Binaries
@@ -43,24 +49,12 @@ documentation:
         * [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) - A Java client for our API
     * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for pulling the GitHub releases API into the website 
 
-### Release AdoptOpenJDK binaries
+### AdoptOpenJDK Source and Distribution Repos
 
-* [openjdk8-releases](https://github.com/AdoptOpenJDK/openjdk8-releases/) - AdoptOpenJDK main binary releases for OpenJDK 8 with HotSpot
-* [openjdk8-openj9-releases](https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 8 with Eclipse OpenJ9
-* [openjdk9-releases](https://github.com/AdoptOpenJDK/openjdk9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 9 with HotSpot
-* [openjdk9-openj9-releases](https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 9 with Eclipse OpenJ9
-* [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with HotSpot
-* [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with Eclipse OpenJ9
+The following diagram lists the source and distro repos for AdoptOpenJDK (edit the 
+[Image Source](https://docs.google.com/drawings/d/1h2YzP1zAUsYku8sFbx5xP2mTe1DFVx-6NOHzQ3Hso5w/edit) at Google and export to make changes.)  
 
-### Nightly AdoptOpenJDK binaries
-
-* [openjdk8-nightly](https://github.com/AdoptOpenJDK/openjdk8-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 8 with HotSpot
-* [openjdk8-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 8 with Eclipse OpenJ9
-* [openjdk9-nightly](https://github.com/AdoptOpenJDK/openjdk9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with HotSpot
-* [openjdk9-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with Eclipse OpenJ9
-* [openjdk10-nightly](https://github.com/AdoptOpenJDK/openjdk10-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with HotSpot
-* [openjdk10-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with Eclipse OpenJ9
-* [openjdk-amber-nightly](https://github.com/AdoptOpenJDK/openjdk-amber-nightly) - AdoptOpenJDK project Amber nightlies
+![Source and Distribution Repos](images/Adopt_Build_Farm_Source_and_Distro_Repos.png)
 
 ### Clones of OpenJDK Forests 
 
@@ -72,12 +66,37 @@ When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its
 * [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 * [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber)
 
+### Nightly AdoptOpenJDK binaries
+
+Our nightly builds have have basic tests run but are not officially supported.
+
+* [openjdk8-nightly](https://github.com/AdoptOpenJDK/openjdk8-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 8 with HotSpot
+* [openjdk8-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 8 with Eclipse OpenJ9
+* [openjdk9-nightly](https://github.com/AdoptOpenJDK/openjdk9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with HotSpot
+* [openjdk9-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with Eclipse OpenJ9
+* [openjdk10-nightly](https://github.com/AdoptOpenJDK/openjdk10-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with HotSpot
+* [openjdk10-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with Eclipse OpenJ9
+* [openjdk-amber-nightly](https://github.com/AdoptOpenJDK/openjdk-amber-nightly) - AdoptOpenJDK project Amber nightlies
+
+### Release AdoptOpenJDK binaries
+
+Our release builds have met a quality bar where the AdoptOpenJDK community is happy to provide support.
+
+* [openjdk8-releases](https://github.com/AdoptOpenJDK/openjdk8-releases/) - AdoptOpenJDK main binary releases for OpenJDK 8 with HotSpot
+* [openjdk8-openj9-releases](https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 8 with Eclipse OpenJ9
+* [openjdk9-releases](https://github.com/AdoptOpenJDK/openjdk9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 9 with HotSpot
+* [openjdk9-openj9-releases](https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 9 with Eclipse OpenJ9
+* [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with HotSpot
+* [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with Eclipse OpenJ9
+
 ### Private repos
 
 Due to security or licensing concerns the following repos are private.  Please raise an issue on the 
  [Infrastructure Project](https://github.com/AdoptOpenJDK/openjdk-infrastructure) if you think you need access.
 
+* [moderation](https://github.com/AdoptOpenJDK/moderation) - For holding moderation requests
 * [secrets](https://github.com/AdoptOpenJDK/secrets) - For holding some secrets
+* [security](https://github.com/AdoptOpenJDK/security) - For the security team
 * [JCK](https://github.com/AdoptOpenJDK/JCK) - documentation, issues and materials that running a JCK (independent of version)
 * [JCK8](https://github.com/AdoptOpenJDK/JCK8) - code and documentation for running JCK8
 * [JCK9](https://github.com/AdoptOpenJDK/JCK9) - code and documentation for running JCK9
@@ -87,11 +106,16 @@ Due to security or licensing concerns the following repos are private.  Please r
 
 ## Workflow
 
-TBA - Diagrams to come
+The following diagram is a very simplified view of how a build progresses through a pipeline (edit the 
+[Image Source](https://docs.google.com/drawings/d/161cqoq0e12nFADSL-bOMeJv4KdwzPRtby8so10msFtg/edit) at Google and export to make changes.)
+
+![Build Variant Workflow](images/Adopt_Build_Farm_Build_Variant_Workflow.png)
+
+**NOTE:** Please ensure you read the documentation below and in the appropriate repos to get a full understanding
 
 The workflow to source, build, test and deploy variants of OpenJDK is as follows.
 
-### 1. Get the Source Code
+### 1. Get the OpenJDK variant source code
 
 We source variants and versions of OpenJDK from a variety of source repositories. 
 [Add a new build variant](https://github.com/AdoptOpenJDK/TSC/wiki/Adding-a-new-build-variant) describes the typical work flow of 
@@ -110,7 +134,7 @@ variants with high impact on the build farm will require funding.
 1. **OpenJDK SAP** - SAP source is built from e.g. [openjdk-sap-jdk10](https://github.com/SAP/SapMachine)
 1. **OpenJDK OpenJFX** - GitHub mirror of OpenJDK JFX lives at AdoptOpenJDK - [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 
-### 2. Manage the Branches to Build from ###
+### 2. Choose the branches to build from ###
 
 Each OpenJDK variant has a canonical branch that is built:  
 1. **OpenJDK HotSpot** - The `dev` branch of AdoptOpenJDK contains extra patches over and above `master` (which is the exact clone of the OpenJDK forest). 
