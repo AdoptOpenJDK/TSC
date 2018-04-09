@@ -24,9 +24,10 @@ See our [https://www.adoptopenjdk.net](https://www.adoptopenjdk.net) for in dept
 ## Dependent Projects
 These projects are located in the following repositories in rough order of importance with regards to understanding how 
 the build farm is put together and works.  Each repository maintains its own set of issues, pull requests and 
-documentation:
+documentation (edit the [Image Source](https://docs.google.com/drawings/d/1daX4YkvpyHOy0aaA80ECC2vKTjOVIUATKiJM4QOw7hI/edit) at Google and export to make 
+changes.)
 
-![Dependent Projects](images/Adopt_Build_Farm_Repo_Relationships.png)
+![Dependent Projects](images/Adopt_Build_Farm_Repo_Relationships.png) 
 
 * [Technical Steering Committee (TSC)](https://github.com/AdoptOpenJDK/TSC) - The Technical Steering Committee and Knowledge Base starting point
   * [security](https://github.com/AdoptOpenJDK/security) - A private repo for the security team
@@ -49,6 +50,9 @@ documentation:
     * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for pulling the GitHub releases API into the website 
 
 ### AdoptOpenJDK Source and Distribution Repos
+
+The following diagram lists the source and distro repos for AdoptOpenJDK (edit the 
+[Image Source](https://docs.google.com/drawings/d/1h2YzP1zAUsYku8sFbx5xP2mTe1DFVx-6NOHzQ3Hso5w/edit) at Google and export to make changes.)  
 
 ![Source and Distribution Repos](images/Adopt_Build_Farm_Source_and_Distro_Repos.png)
 
@@ -102,7 +106,8 @@ Due to security or licensing concerns the following repos are private.  Please r
 
 ## Workflow
 
-The following diagram is a very simplified view of how a build progresses through a pipeline.
+The following diagram is a very simplified view of how a build progresses through a pipeline (edit the 
+[Image Source](https://docs.google.com/drawings/d/161cqoq0e12nFADSL-bOMeJv4KdwzPRtby8so10msFtg/edit) at Google and export to make changes.)
 
 ![Build Variant Workflow](images/Adopt_Build_Farm_Build_Variant_Workflow.png)
 
