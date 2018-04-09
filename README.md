@@ -48,24 +48,9 @@ documentation:
         * [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) - A Java client for our API
     * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for pulling the GitHub releases API into the website 
 
-### Release AdoptOpenJDK binaries
+### AdoptOpenJDK Source and Distribution Repos
 
-* [openjdk8-releases](https://github.com/AdoptOpenJDK/openjdk8-releases/) - AdoptOpenJDK main binary releases for OpenJDK 8 with HotSpot
-* [openjdk8-openj9-releases](https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 8 with Eclipse OpenJ9
-* [openjdk9-releases](https://github.com/AdoptOpenJDK/openjdk9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 9 with HotSpot
-* [openjdk9-openj9-releases](https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 9 with Eclipse OpenJ9
-* [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with HotSpot
-* [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with Eclipse OpenJ9
-
-### Nightly AdoptOpenJDK binaries
-
-* [openjdk8-nightly](https://github.com/AdoptOpenJDK/openjdk8-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 8 with HotSpot
-* [openjdk8-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 8 with Eclipse OpenJ9
-* [openjdk9-nightly](https://github.com/AdoptOpenJDK/openjdk9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with HotSpot
-* [openjdk9-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with Eclipse OpenJ9
-* [openjdk10-nightly](https://github.com/AdoptOpenJDK/openjdk10-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with HotSpot
-* [openjdk10-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with Eclipse OpenJ9
-* [openjdk-amber-nightly](https://github.com/AdoptOpenJDK/openjdk-amber-nightly) - AdoptOpenJDK project Amber nightlies
+![Source and Distribtuion Repos](images/Adopt_Build_Farm_Source_and_Distro_Repos.png)
 
 ### Clones of OpenJDK Forests 
 
@@ -76,6 +61,32 @@ When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its
 * [openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10)
 * [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 * [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber)
+
+### Nightly AdoptOpenJDK binaries
+
+Our nightly builds have have basic tests run but are not officially supported.
+
+* [openjdk8-nightly](https://github.com/AdoptOpenJDK/openjdk8-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 8 with HotSpot
+* [openjdk8-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 8 with Eclipse OpenJ9
+* [openjdk9-nightly](https://github.com/AdoptOpenJDK/openjdk9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with HotSpot
+* [openjdk9-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with Eclipse OpenJ9
+* [openjdk10-nightly](https://github.com/AdoptOpenJDK/openjdk10-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with HotSpot
+* [openjdk10-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with Eclipse OpenJ9
+* [openjdk-amber-nightly](https://github.com/AdoptOpenJDK/openjdk-amber-nightly) - AdoptOpenJDK project Amber nightlies
+
+### Release AdoptOpenJDK binaries
+
+Our release builds have met a quality bar where the AdoptOpenJDK community is happy to provide support.
+
+* [openjdk8-releases](https://github.com/AdoptOpenJDK/openjdk8-releases/) - AdoptOpenJDK main binary releases for OpenJDK 8 with HotSpot
+* [openjdk8-openj9-releases](https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 8 with Eclipse OpenJ9
+* [openjdk9-releases](https://github.com/AdoptOpenJDK/openjdk9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 9 with HotSpot
+* [openjdk9-openj9-releases](https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 9 with Eclipse OpenJ9
+* [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with HotSpot
+* [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with Eclipse OpenJ9
+
+
+
 
 ### Private repos
 
