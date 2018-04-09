@@ -50,7 +50,7 @@ documentation:
 
 ### AdoptOpenJDK Source and Distribution Repos
 
-![Source and Distribtuion Repos](images/Adopt_Build_Farm_Source_and_Distro_Repos.png)
+![Source and Distribution Repos](images/Adopt_Build_Farm_Source_and_Distro_Repos.png)
 
 ### Clones of OpenJDK Forests 
 
@@ -85,9 +85,6 @@ Our release builds have met a quality bar where the AdoptOpenJDK community is ha
 * [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with HotSpot
 * [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with Eclipse OpenJ9
 
-
-
-
 ### Private repos
 
 Due to security or licensing concerns the following repos are private.  Please raise an issue on the 
@@ -105,11 +102,15 @@ Due to security or licensing concerns the following repos are private.  Please r
 
 ## Workflow
 
-TBA - Diagrams to come
+The following diagram is a very simplified view of how a build progresses through a pipeline.
+
+![Build Variant Workflow](images/Adopt_Build_Farm_Build_Variant_Workflow.png)
+
+**NOTE:** Please ensure you read the documentation below and in the appropriate repos to get a full understanding
 
 The workflow to source, build, test and deploy variants of OpenJDK is as follows.
 
-### 1. Get the Source Code
+### 1. Get the OpenJDK variant source code
 
 We source variants and versions of OpenJDK from a variety of source repositories. 
 [Add a new build variant](https://github.com/AdoptOpenJDK/TSC/wiki/Adding-a-new-build-variant) describes the typical work flow of 
@@ -128,7 +129,7 @@ variants with high impact on the build farm will require funding.
 1. **OpenJDK SAP** - SAP source is built from e.g. [openjdk-sap-jdk10](https://github.com/SAP/SapMachine)
 1. **OpenJDK OpenJFX** - GitHub mirror of OpenJDK JFX lives at AdoptOpenJDK - [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 
-### 2. Manage the Branches to Build from ###
+### 2. Choose the branches to build from ###
 
 Each OpenJDK variant has a canonical branch that is built:  
 1. **OpenJDK HotSpot** - The `dev` branch of AdoptOpenJDK contains extra patches over and above `master` (which is the exact clone of the OpenJDK forest). 
