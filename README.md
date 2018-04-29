@@ -33,8 +33,9 @@ changes.)
   * [security](https://github.com/AdoptOpenJDK/security) - A private repo for the security team
     * [moderation](https://github.com/AdoptOpenJDK/moderation) - A private repo for moderation requests
     * [secrets](https://github.com/AdoptOpenJDK/secrets) - A private repo for secrets
-* [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts
-    * [openjdk-jenkins-helper](https://github.com/AdoptOpenJDK/openjdk-jenkins-helper) - A auto label generator for Jenkins
+* [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts]
+    * [email](https://github.com/AdoptOpenJDK/email) - For handling all org emails (mailgun)
+    * [openjdk-jenkins-helper](https://github.com/AdoptOpenJDK/openjdk-jenkins-helper) - An auto label generator for Jenkins
 * [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) - Code and instructions for building Adopt OpenJDK Binaries
     * [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) - Scripts for creating Docker images of OpenJDK binaries
     * [openjdk-installer](https://github.com/AdoptOpenJDK/openjdk-installer) - Installer files for creating platform packaged OpenJDK binaries
