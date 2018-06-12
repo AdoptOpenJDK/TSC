@@ -62,7 +62,7 @@ When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its
 
 * [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u)
 * [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9) - **TODO** move this to jdk9u
-* [openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10)
+* [openjdk-jdk10u](https://github.com/AdoptOpenJDK/openjdk-jdk10u)
 * [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 * [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber)
 
