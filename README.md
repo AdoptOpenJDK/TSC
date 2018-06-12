@@ -33,7 +33,7 @@ changes.)
   * [security](https://github.com/AdoptOpenJDK/security) - A private repo for the security team
     * [moderation](https://github.com/AdoptOpenJDK/moderation) - A private repo for moderation requests
     * [secrets](https://github.com/AdoptOpenJDK/secrets) - A private repo for secrets
-* [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts]
+* [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts
     * [email](https://github.com/AdoptOpenJDK/email) - For handling all org emails (mailgun)
     * [openjdk-jenkins-helper](https://github.com/AdoptOpenJDK/openjdk-jenkins-helper) - An auto label generator for Jenkins
 * [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) - Code and instructions for building Adopt OpenJDK Binaries
@@ -63,7 +63,7 @@ When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its
 
 * [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u)
 * [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9) - **TODO** move this to jdk9u
-* [openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10)
+* [openjdk-jdk10u](https://github.com/AdoptOpenJDK/openjdk-jdk10u)
 * [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 * [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber)
 
