@@ -197,31 +197,31 @@ for more details.
 
 # The TSC
 
-**NOTE** This section is a DRAFT and has not yet been fully discussed or ratified by the AdoptOpenJDK community at large.
+## List of TSC Responsibilities
 
-## Proposed List of TSC Responsibilities
-The TSC exercises autonomy in setting up and maintaining procedures, policies, and management and administrative structures as it deems appropriate for the
-maintenance and operation of these projects and resources.
+The TSC exercises autonomy in setting up and maintaining procedures, policies, and management and administrative structures as it deems appropriate for the maintenance and operation of these projects and resources.
 
 Included in the responsibilities of the TSC are:
 
-* Managing code and documentation creation and changes for the listed projects and resources
-* Meeting monthly to discuss progress and other TSC issues
-* Setting and maintaining standards covering contributions of code, documentation and other materials
-* Managing code and binary releases: types, schedules, frequency, delivery mechanisms
-* Creating new repositories and projects under the _AdoptOpenJDK_ GitHub organisation as required
-* Setting overall technical direction for the AdoptOpenJDK organisation, including high-level goals and low-level specifics regarding features and functionality
-* Has a relationship with the AdoptOpenJDK security group for dealing with vulnerabilities in an appropriate manner
-* Setting and maintaining appropriate standards for community discourse via the various mediums under TSC control
+-   Managing the tangible assets of the projects such as machines, code, etc, and the intangible assets such as policies, brand, etc for the listed projects and resources
+    
+-   Meeting monthly to discuss progress and other TSC issues
+    
+-   Setting and maintaining standards covering contributions of code, documentation and other materials including infrastructure such as build machines
+    
+-   Facilitating code and binary releases: types, schedules, frequency, delivery mechanisms
+    
+-   Acquiring resources and ensuring they are maintained in a functional and secure manner for the benefit of the project.
+    
+-   Resolving overall technical direction for the AdoptOpenJDK organization, including high-level goals and low-level specifics regarding features and functionality
+    
+-   Maintaining a relationship with the AdoptOpenJDK security group for dealing with vulnerabilities in an appropriate manner
+    
+-   Setting and maintaining appropriate standards for community discourse via the various mediums under TSC control, including but not limited to the Website, Slack, GitHub comments
 
 ## TSC Members
 
-TSC members can nominate new members at any time. Candidates for membership tend to be people
-who have a competency for community management and a high tolerance and patience for process
-minutiae as the TSC delegates most of its responsibilities to other teams.
-
-Every Dependent Project not currently incubating can appoint someone to the TSC who they elect
-at their own discretion.
+TSC members can nominate new members at any time. Candidates for membership tend to be people who have a competency for community management and high tolerance and patience for process minutiae as the TSC delegates most of its responsibilities to other teams.
 
 ### Current Members
 
@@ -237,10 +237,14 @@ at their own discretion.
 | ![](https://avatars0.githubusercontent.com/u/6487691?s=100&v=4) <br> [sxa555](https://github.com/sxa555) - Stewart X Addison (IBM) | ![](https://avatars1.githubusercontent.com/u/621161?s=100&v=4) <br> [tellison](https://github.com/tellison) - Tim Ellison (IBM) | ![](https://avatars2.githubusercontent.com/u/35047?s=100&v=4) <br> [vielmetti](https://github.com/vielmetti) - Edward Vielmetti (Packet)
 
 ## Proposed Rules for TSC Membership
-* No single company can occupy more than 1/2 seats on the TSC
-* The appointing of TSC members occurs on an annual basis and is based on a meritocracy.
-* Candidates with the intention of becoming a member of the TSC should briefly outline where they'd like to see the project going - all in a transparent manner
-that is available to the public.
+1.  No single organization can occupy more than 1/2 seats on the TSC
+    
+2.  The appointing of TSC members occurs on an annual basis and is based on a do-ocracy.
+    
+3.  Candidates with the intention of becoming a member of the TSC should briefly outline where they'd like to see the project going - all in a transparent manner that is available to the public.
+
+## Election Process
+Each community member has a Single Transferable Vote (STV). There are tools to manage STV voting: https://en.wikipedia.org/wiki/Single_transferable_vote#Voting
 
 Thanks!
 The AdoptOpenJDK Community.
