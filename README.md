@@ -232,9 +232,9 @@ at their own discretion.
 
 | | Members <br> (listed alphabetically)| |
 |:--:|:--:|:--:|
-| ![](https://avatars3.githubusercontent.com/u/20224954?s=100&v=4) <br> [gdams](https://github.com/gdams) - George Adams (IBM)  | ![](https://avatars3.githubusercontent.com/u/357222?s=100&v=4) <br> [jerboaa](https://github.com/jerboaa) - Severin Gehwolf (RedHat) | ![](https://avatars0.githubusercontent.com/u/1615532?s=100&v=4) <br> [johnoliver](https://github.com/johnoliver) - John Oliver (LJC) |
-| ![](https://avatars1.githubusercontent.com/u/180840?s=100&v=4) <br> [karianna](https://github.com/karianna) - Martijn Verburg (LJC) | ![](https://avatars3.githubusercontent.com/u/2836948?s=100&v=4) <br> [smlambert](https://github.com/smlambert) - Shelley Lambert (IBM) | ![](https://avatars0.githubusercontent.com/u/6487691?s=100&v=4) <br> [sxa555](https://github.com/sxa555) - Stewart X Addison (IBM) |
-| ![](https://avatars1.githubusercontent.com/u/621161?s=100&v=4) <br> [tellison](https://github.com/tellison) - Tim Ellison (IBM) | ![](https://avatars2.githubusercontent.com/u/35047?s=100&v=4) <br> [vielmetti](https://github.com/vielmetti) - Edward Vielmetti (Packet)
+| ![](https://avatars3.githubusercontent.com/u/663613?s=100&v=4) <br> [cmdc0de](https://github.com/cmdc0de) - Demetrius Comes (GoDaddy) | ![](https://avatars3.githubusercontent.com/u/20224954?s=100&v=4) <br> [gdams](https://github.com/gdams) - George Adams (IBM) | ![](https://avatars3.githubusercontent.com/u/357222?s=100&v=4) <br> [jerboaa](https://github.com/jerboaa) - Severin Gehwolf (RedHat) | 
+| ![](https://avatars0.githubusercontent.com/u/1615532?s=100&v=4) <br> [johnoliver](https://github.com/johnoliver) - John Oliver (LJC) | ![](https://avatars1.githubusercontent.com/u/180840?s=100&v=4) <br> [karianna](https://github.com/karianna) - Martijn Verburg (LJC) | ![](https://avatars3.githubusercontent.com/u/2836948?s=100&v=4) <br> [smlambert](https://github.com/smlambert) - Shelley Lambert (IBM) |
+| ![](https://avatars0.githubusercontent.com/u/6487691?s=100&v=4) <br> [sxa555](https://github.com/sxa555) - Stewart X Addison (IBM) | ![](https://avatars1.githubusercontent.com/u/621161?s=100&v=4) <br> [tellison](https://github.com/tellison) - Tim Ellison (IBM) | ![](https://avatars2.githubusercontent.com/u/35047?s=100&v=4) <br> [vielmetti](https://github.com/vielmetti) - Edward Vielmetti (Packet)
 
 ## Proposed Rules for TSC Membership
 * No single company can occupy more than 1/3 seats on the TSC
