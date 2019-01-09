@@ -237,7 +237,7 @@ at their own discretion.
 | ![](https://avatars0.githubusercontent.com/u/6487691?s=100&v=4) <br> [sxa555](https://github.com/sxa555) - Stewart X Addison (IBM) | ![](https://avatars1.githubusercontent.com/u/621161?s=100&v=4) <br> [tellison](https://github.com/tellison) - Tim Ellison (IBM) | ![](https://avatars2.githubusercontent.com/u/35047?s=100&v=4) <br> [vielmetti](https://github.com/vielmetti) - Edward Vielmetti (Packet)
 
 ## Proposed Rules for TSC Membership
-* No single company can occupy more than 1/3 seats on the TSC
+* No single company can occupy more than 1/2 seats on the TSC
 * The appointing of TSC members occurs on an annual basis and is based on a meritocracy.
 * Candidates with the intention of becoming a member of the TSC should briefly outline where they'd like to see the project going - all in a transparent manner
 that is available to the public.
