@@ -237,7 +237,7 @@ TSC members can nominate new members at any time. Candidates for membership tend
 | ![](https://avatars0.githubusercontent.com/u/6487691?s=100&v=4) <br> [sxa555](https://github.com/sxa555) - Stewart X Addison (IBM) | ![](https://avatars1.githubusercontent.com/u/621161?s=100&v=4) <br> [tellison](https://github.com/tellison) - Tim Ellison (IBM) | ![](https://avatars2.githubusercontent.com/u/35047?s=100&v=4) <br> [vielmetti](https://github.com/vielmetti) - Edward Vielmetti (Packet)
 
 ## Rules for TSC Membership
-1.  No single organization can occupy more than 1/2 seats on the TSC
+1.  No single organization can occupy more than half the seats on the TSC.
     
 2.  The appointing of TSC members occurs on an annual basis and is based on a do-ocracy.
     
