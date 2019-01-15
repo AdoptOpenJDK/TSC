@@ -45,7 +45,6 @@ changes.)
 * [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Instructions for all testing at AdoptOpenJDK, code for app, performance and regression testing of AdoptOpenJDK Binaries and CI test automation scripts
     * [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest) - Code and instructions for system and load testing AdoptOpenJDK Binaries
     * [openjdk-stf](https://github.com/AdoptOpenJDK/openjdk-stf) - The System Test Framework, a harness for executing [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest)
-    * See [Private Repos](https://github.com/AdoptOpenJDK/TSC#private-repos) for JCK related test repos
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
         * [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) - A Java client for our API
@@ -99,12 +98,15 @@ Due to security or licensing concerns the following repos are private.  Please r
 * [moderation](https://github.com/AdoptOpenJDK/moderation) - For holding moderation requests
 * [secrets](https://github.com/AdoptOpenJDK/secrets) - For holding some secrets
 * [security](https://github.com/AdoptOpenJDK/security) - For the security team
+* [openjdk-website-staging](https://github.com/AdoptOpenJDK/openjdk-staging-webiste) - for staging website PR's
+
+The following private repos are obsolete:
+
 * [JCK](https://github.com/AdoptOpenJDK/JCK) - documentation, issues and materials that running a JCK (independent of version)
 * [JCK8](https://github.com/AdoptOpenJDK/JCK8) - code and documentation for running JCK8
 * [JCK9](https://github.com/AdoptOpenJDK/JCK9) - code and documentation for running JCK9
 * [JCK10](https://github.com/AdoptOpenJDK/JCK10) - code and documentation for running JCK10
 * [JCK-results](https://github.com/AdoptOpenJDK/JCK-results) - for storing JCK results
-* [openjdk-website-staging](https://github.com/AdoptOpenJDK/openjdk-staging-webiste) - for staging website PR's
 
 ## Workflow
 
@@ -171,8 +173,6 @@ sends the test jobs to the Jenkins followers based on a similar tagging system t
 Tests include, but are not limited to the jtreg tests that come with OpenJDK itself.
 1. **Builds are system tested** - [System Tests](https://ci.adoptopenjdk.net/view/System%20tests/)
 from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) are executed and test results are posted to TODO
-1. **Builds are (J)TCK tested** - TCK (JCK) tests are executed and success / failure is reported to TODO.  Note that internal details cannot be disseminated
-to the public due to the TCK licensing agreement.
 
 #### 3.3 Deploy Binaries
 
