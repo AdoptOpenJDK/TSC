@@ -14,13 +14,13 @@ the [Contribution Guide](CONTRIBUTING.md).
 
 The AdoptOpenJDK Build Farm is three things:
 
+1. **A Community of builders** - A place where those who build and test OpenJDK come together to share common code and practices.
+1. **Professionally built OpenJDK binaries** - A place for end users to download professionally built and tested OpenJDK binaries.
 1. **Infrastructure as Code** - To host, build, test and deploy variants of [OpenJDK](http://openjdk.java.net) (aka Java)!
 This infrastructure as code is designed to be usable by any person or organisation wishing to build a derivative
 build farm or parts of one.
-1. **Professionally built OpenJDK binaries** - A place for end users to download professionally built and tested OpenJDK binaries.
-1. **A Community of builders** - A place where those who build and test OpenJDK come together to share common code and practices.
 
-See our [https://www.adoptopenjdk.net](https://www.adoptopenjdk.net) for in depth details of the motivation, who's involved, the sponsors and much more!
+See [https://www.adoptopenjdk.net](https://www.adoptopenjdk.net) for in depth details of the motivation, who's involved, the sponsors and much more!
 
 ## Dependent Projects
 These projects are located in the following repositories in rough order of importance with regards to understanding how
@@ -31,24 +31,30 @@ changes.)
 ![Dependent Projects](images/Adopt_Build_Farm_Repo_Relationships.png)
 
 * [Technical Steering Committee (TSC)](https://github.com/AdoptOpenJDK/TSC) - The Technical Steering Committee and Knowledge Base starting point
+  * [TSC-confidential)](https://github.com/AdoptOpenJDK/TSC-confidential) - To hold any confidential information for the TSC, e.g. Sponsorship Agreements 
   * [security](https://github.com/AdoptOpenJDK/security) - A private repo for the security team
     * [moderation](https://github.com/AdoptOpenJDK/moderation) - A private repo for moderation requests
     * [secrets](https://github.com/AdoptOpenJDK/secrets) - A private repo for secrets
+  * [buzz](https://github.com/AdoptOpenJDK/buzz) - Community Outreach and Sponsors
 * [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts
     * [email](https://github.com/AdoptOpenJDK/email) - For handling all org emails (mailgun)
     * [openjdk-jenkins-helper](https://github.com/AdoptOpenJDK/openjdk-jenkins-helper) - An auto label generator for Jenkins
 * [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) - Code and instructions for building Adopt OpenJDK Binaries
     * [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) - Scripts for creating Docker images of OpenJDK binaries
+    * [openjdk-docker-build-tools](https://github.com/AdoptOpenJDK/openjdk-docker-build-tools) - Helper scripts for [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) 
     * [openjdk-installer](https://github.com/AdoptOpenJDK/openjdk-installer) - Installer files for creating platform packaged OpenJDK binaries
     * [homebrew-openjdk](https://github.com/AdoptOpenJDK/homebrew-openjdk) - HomeBrew TAP repo for all macOS OpenJDK binaries
     * [jdk-api-diff](https://github.com/AdoptOpenJDK/jdk-api-diff) - A diff tool that reports what API changes there are between versions
 * [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Instructions for all testing at AdoptOpenJDK, code for app, performance and regression testing of AdoptOpenJDK Binaries and CI test automation scripts
+    * [openjdk-test-tools](https://github.com/AdoptOpenJDK/openjdk-test-tools) - Tools for openjdk testing (not to be confused with [stf](https://github.com/AdoptOpenJDK/stf) which is the tooling for system tests)
     * [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest) - Code and instructions for system and load testing AdoptOpenJDK Binaries
     * [stf](https://github.com/AdoptOpenJDK/stf) - The System Test Framework, a harness for executing [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest)
+    * [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) - A microbenchmarking test framework for Adopt OpenJDK
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
         * [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) - A Java client for our API
     * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for pulling the GitHub releases API into the website
+    * [openjdk-dashboard](https://github.com/AdoptOpenJDK/openjdk-dashboard) - AdoptOpenJDK Dashboard for download stats at https://dash.adoptopenjdk.net
 
 ### AdoptOpenJDK Source and Distribution Repos
 
@@ -62,51 +68,37 @@ The following diagram lists the source and distro repos for AdoptOpenJDK (edit t
 When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its own patches then we have a clone of that source:
 
 * [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u)
-* [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9) - **TODO** move this to jdk9u
+* [openjdk-aarch64-jdk8u](https://github.com/AdoptOpenJDK/openjdk-aarch64-jdk8u)
+* [openjdk-jdk9u](https://github.com/AdoptOpenJDK/openjdk-jdk9u)
 * [openjdk-jdk10u](https://github.com/AdoptOpenJDK/openjdk-jdk10u)
+* [openjdk-jdk11u](https://github.com/AdoptOpenJDK/openjdk-jdk11u)
+* [openjdk-jdk12u](https://github.com/AdoptOpenJDK/openjdk-jdk12u)
+* [openjdk-jdk](https://github.com/AdoptOpenJDK/openjdk-jdk)
 * [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 * [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber)
 
-### Nightly AdoptOpenJDK binaries
+### AdoptOpenJDK binary repos
 
-Our nightly builds have have basic tests run but are not officially supported.
+These GitHub Repos are where builds that pass the pipeline are published to. The 
+API (and subsequently) website poll these repos to make binaries available.
 
-* [openjdk8-nightly](https://github.com/AdoptOpenJDK/openjdk8-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 8 with HotSpot
-* [openjdk8-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 8 with Eclipse OpenJ9
-* [openjdk9-nightly](https://github.com/AdoptOpenJDK/openjdk9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with HotSpot
-* [openjdk9-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 9 with Eclipse OpenJ9
-* [openjdk10-nightly](https://github.com/AdoptOpenJDK/openjdk10-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with HotSpot
-* [openjdk10-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/) - AdoptOpenJDK main binary nightlies for OpenJDK 10 with Eclipse OpenJ9
-* [openjdk-amber-nightly](https://github.com/AdoptOpenJDK/openjdk-amber-nightly) - AdoptOpenJDK project Amber nightlies
-
-### Release AdoptOpenJDK binaries
-
-Our release builds have met a quality bar where the AdoptOpenJDK community is happy to provide support.
-
-* [openjdk8-releases](https://github.com/AdoptOpenJDK/openjdk8-releases/) - AdoptOpenJDK main binary releases for OpenJDK 8 with HotSpot
-* [openjdk8-openj9-releases](https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 8 with Eclipse OpenJ9
-* [openjdk9-releases](https://github.com/AdoptOpenJDK/openjdk9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 9 with HotSpot
-* [openjdk9-openj9-releases](https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 9 with Eclipse OpenJ9
-* [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with HotSpot
-* [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/) - AdoptOpenJDK main binary releases for OpenJDK 10 with Eclipse OpenJ9
+* [openjdk8-binaries](https://github.com/AdoptOpenJDK/openjdk8-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK 8 (HotSpot VM and Eclipse OpenJ9 VM)
+* [openjdk9-binaries](https://github.com/AdoptOpenJDK/openjdk9-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK 9 (HotSpot VM and Eclipse OpenJ9 VM)
+* [openjdk10-binaries](https://github.com/AdoptOpenJDK/openjdk10-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK 10 (HotSpot VM and Eclipse OpenJ9 VM)
+* [openjdk11-binaries](https://github.com/AdoptOpenJDK/openjdk11-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK 11 (HotSpot VM and Eclipse OpenJ9 VM)
+* [openjdk12-binaries](https://github.com/AdoptOpenJDK/openjdk12-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK 12 (HotSpot VM and Eclipse OpenJ9 VM)
+* [openjdk-binaries](https://github.com/AdoptOpenJDK/openjdk-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK (Latest) (HotSpot VM and Eclipse OpenJ9 VM)
 
 ### Private repos
 
 Due to security or licensing concerns the following repos are private.  Please raise an issue on the
  [Infrastructure Project](https://github.com/AdoptOpenJDK/openjdk-infrastructure) if you think you need access.
 
+* [TSC-confidential)](https://github.com/AdoptOpenJDK/TSC-confidential) - To hold any confidential information for the TSC, e.g. Sponsorship Agreements
 * [moderation](https://github.com/AdoptOpenJDK/moderation) - For holding moderation requests
 * [secrets](https://github.com/AdoptOpenJDK/secrets) - For holding some secrets
 * [security](https://github.com/AdoptOpenJDK/security) - For the security team
 * [openjdk-website-staging](https://github.com/AdoptOpenJDK/openjdk-staging-webiste) - for staging website PR's
-
-The following private repos are obsolete:
-
-* [JCK](https://github.com/AdoptOpenJDK/JCK) - documentation, issues and materials that running a JCK (independent of version)
-* [JCK8](https://github.com/AdoptOpenJDK/JCK8) - code and documentation for running JCK8
-* [JCK9](https://github.com/AdoptOpenJDK/JCK9) - code and documentation for running JCK9
-* [JCK10](https://github.com/AdoptOpenJDK/JCK10) - code and documentation for running JCK10
-* [JCK-results](https://github.com/AdoptOpenJDK/JCK-results) - for storing JCK results
 
 ## Workflow
 
@@ -173,6 +165,10 @@ sends the test jobs to the Jenkins followers based on a similar tagging system t
 Tests include, but are not limited to the jtreg tests that come with OpenJDK itself.
 1. **Builds are system tested** - [System Tests](https://ci.adoptopenjdk.net/view/System%20tests/)
 from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) are executed and test results are posted to TODO
+1. **Builds are external tested** - [External Tests](https://ci.adoptopenjdk.net/view/Test_external/) are executed and test results are posted to TODO
+1. **Builds are performance tested** - [Performance Tests](https://ci.adoptopenjdk.net/view/Test_perf/)
+from [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) are executed and test results are posted to TODO
+
 
 #### 3.3 Deploy Binaries
 
@@ -182,14 +178,14 @@ from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) 
 
 1. **Binaries are deployed** - Using the [OpenJDK Release Tool](https://ci.adoptopenjdk.net/view/Tooling/job/openjdk_release_tool/) (from the
 [openjdk-webiste-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) project) in order to:
-    1. deploy them to the various nightly repos:
-    ([openjdk8-nightly](https://github.com/AdoptOpenJDK/openjdk8-nightly/), [openjdk8-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/),
-    [openjdk9-nightly](https://github.com/AdoptOpenJDK/openjdk9-nightly/), [openjdk9-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/),
-    [openjdk10-nightly](https://github.com/AdoptOpenJDK/openjdk10-nightly/), [openjdk10-openj9-nightly](https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/))
-    and release repos:
-    ([openjdk8-releases](https://github.com/AdoptOpenJDK/openjdk8-releases/), [openjdk8-openj9-releases](https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/),
-    [openjdk9-releases](https://github.com/AdoptOpenJDK/openjdk9-releases/), [openjdk9-openj9-releases](https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/),
-    [openjdk10-releases](https://github.com/AdoptOpenJDK/openjdk10-releases/), [openjdk10-openj9-releases](https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/))
+    1. deploy them to the various binary repos:
+    ([openjdk8-binaries](https://github.com/AdoptOpenJDK/openjdk8-binaries/),
+    [openjdk9-binaries](https://github.com/AdoptOpenJDK/openjdk9-binaries/),
+    [openjdk10-binaries](https://github.com/AdoptOpenJDK/openjdk10-binaries/),
+    [openjdk11-binaries](https://github.com/AdoptOpenJDK/openjdk11-binaries/),
+    [openjdk12-binaries](https://github.com/AdoptOpenJDK/openjdk12-binaries/),
+    [openjdk-binaries](https://github.com/AdoptOpenJDK/openjdk-binaries/)).
+
 1. **Binaries made available** - Binaries are made available for download via the [website](https://www.adoptopenjdk.net)
 and [api](https://api.adoptopenjdk.net) gateway. See [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website),
 [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) and [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) projects
