@@ -14,8 +14,8 @@ the [Contribution Guide](CONTRIBUTING.md).
 
 The AdoptOpenJDK Build Farm is three things:
 
+1. **A Repository of professionally built, tested and supported OpenJDK binaries** - A place for end users to download professionally built and tested OpenJDK binaries, see [Support](https://adoptopenjdk.net/support.html) for our full support details.
 1. **A Community of builders** - A place where those who build and test OpenJDK come together to share common code and practices.
-1. **Professionally built OpenJDK binaries** - A place for end users to download professionally built and tested OpenJDK binaries.
 1. **Infrastructure as Code** - To host, build, test and deploy variants of [OpenJDK](http://openjdk.java.net) (aka Java)!
 This infrastructure as code is designed to be usable by any person or organisation wishing to build a derivative
 build farm or parts of one.
