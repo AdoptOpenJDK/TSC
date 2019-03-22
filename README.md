@@ -93,7 +93,7 @@ API (and subsequently) website poll these repos to make binaries available.
 
 ### OpenJDK binary repos
 
-These GitHub Repos are where builds from the OpenjDK update projects (lead by 
+These GitHub Repos are where builds from the OpenjDK update projects (led by 
 Red Hat) are published to. The API (and subsequently) website poll these repos 
 to make binaries available.
 
