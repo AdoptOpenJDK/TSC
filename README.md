@@ -34,6 +34,7 @@ changes.)
   * [TSC-confidential)](https://github.com/AdoptOpenJDK/TSC-confidential) - To hold any confidential information for the TSC, e.g. Sponsorship Agreements 
   * [security](https://github.com/AdoptOpenJDK/security) - A private repo for the security team
     * [moderation](https://github.com/AdoptOpenJDK/moderation) - A private repo for moderation requests
+    * [openjdk-security](https://github.com/AdoptOpenJDK/openjdk-security) - A private repo for (adopt)openjdk vulnerability investigations
     * [secrets](https://github.com/AdoptOpenJDK/secrets) - A private repo for secrets
   * [buzz](https://github.com/AdoptOpenJDK/buzz) - Community Outreach and Sponsors
 * [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts
@@ -90,6 +91,15 @@ API (and subsequently) website poll these repos to make binaries available.
 * [openjdk12-binaries](https://github.com/AdoptOpenJDK/openjdk12-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK 12 (HotSpot VM and Eclipse OpenJ9 VM)
 * [openjdk-binaries](https://github.com/AdoptOpenJDK/openjdk-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK (Latest) (HotSpot VM and Eclipse OpenJ9 VM)
 
+### OpenJDK binary repos
+
+These GitHub Repos are where builds from the OpenjDK update projects (led by 
+Red Hat) are published to. The API (and subsequently) website poll these repos 
+to make binaries available.
+
+* [openjdk8-upstream-binaries](https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/) - OpenJDK nightly and release binaries for OpenJDK 8 (HotSpot VM)
+* [openjdk11-upstream-binaries](https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/) - OpenJDK nightly and release binaries for OpenJDK 11 (HotSpot VM)
+
 ### Private repos
 
 Due to security or licensing concerns the following repos are private.  Please raise an issue on the
@@ -99,6 +109,7 @@ Due to security or licensing concerns the following repos are private.  Please r
 * [moderation](https://github.com/AdoptOpenJDK/moderation) - For holding moderation requests
 * [secrets](https://github.com/AdoptOpenJDK/secrets) - For holding some secrets
 * [security](https://github.com/AdoptOpenJDK/security) - For the security team
+* [openjdk-security](https://github.com/AdoptOpenJDK/openjdk-security) - A private repo for (adopt)openjdk vulnerability investigations
 * [openjdk-website-staging](https://github.com/AdoptOpenJDK/openjdk-staging-webiste) - for staging website PR's
 
 ## Workflow
@@ -158,6 +169,10 @@ sends the build jobs to the Jenkins followers based on a tagging system configur
 
 #### 3.2 Test
 
+Note that other OpenJDK binaries (such as the [openjdk8-upstream-binaries](https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/) and 
+[openjdk11-upstream-binaries](https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/)) can be put through pipelines 
+entering at this Test phase.
+
 [Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the
 [Supported Test Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader
 sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and
@@ -169,7 +184,6 @@ from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) 
 1. **Builds are external tested** - [External Tests](https://ci.adoptopenjdk.net/view/Test_external/) are executed and test results are posted to TODO
 1. **Builds are performance tested** - [Performance Tests](https://ci.adoptopenjdk.net/view/Test_perf/)
 from [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) are executed and test results are posted to TODO
-
 
 #### 3.3 Deploy Binaries
 
