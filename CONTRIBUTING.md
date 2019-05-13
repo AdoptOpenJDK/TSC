@@ -14,7 +14,7 @@ documentation, the TSC repo simply provides a starting point.
 For the TSC, we use the the repository [Project](https://github.com/AdoptOpenJDK/TSC/projects/1) to manage Issues and Pull 
 Requests.  Although straight out Pull Requests are welcome, we prefer that you:
 
- 1. [Review existing issues](https://github.com/AdoptOpenJDK/TSC/issues/new) to avoid duplication
+ 1. [Review existing issues](https://github.com/AdoptOpenJDK/TSC/issues) to avoid duplication
  1. [Create a new Issue](https://github.com/AdoptOpenJDK/TSC/issues/new)
     1. Please add the TSC project and add a label
  1. Drop a message in the _getopenjdk_ channel to discuss the issue
