@@ -53,6 +53,7 @@ changes.)
     * [stf](https://github.com/AdoptOpenJDK/stf) - The System Test Framework, a harness for executing [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest)
     * [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) - A microbenchmarking test framework for Adopt OpenJDK
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
+    * [openjdk-website-next](https://github.com/AdoptOpenJDK/openjdk-website-next) - The Typescript and React re-write for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
         * [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) - A Java client for our API
     * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for pulling the GitHub releases API into the website
@@ -75,6 +76,7 @@ When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its
 * [openjdk-jdk10u](https://github.com/AdoptOpenJDK/openjdk-jdk10u)
 * [openjdk-jdk11u](https://github.com/AdoptOpenJDK/openjdk-jdk11u)
 * [openjdk-jdk12u](https://github.com/AdoptOpenJDK/openjdk-jdk12u)
+* [openjdk-jdk13u](https://github.com/AdoptOpenJDK/openjdk-jdk13u)
 * [openjdk-jdk](https://github.com/AdoptOpenJDK/openjdk-jdk)
 * [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 * [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber)
@@ -89,6 +91,7 @@ API (and subsequently) website poll these repos to make binaries available.
 * [openjdk10-binaries](https://github.com/AdoptOpenJDK/openjdk10-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK 10 (HotSpot VM and Eclipse OpenJ9 VM)
 * [openjdk11-binaries](https://github.com/AdoptOpenJDK/openjdk11-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK 11 (HotSpot VM and Eclipse OpenJ9 VM)
 * [openjdk12-binaries](https://github.com/AdoptOpenJDK/openjdk12-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK 12 (HotSpot VM and Eclipse OpenJ9 VM)
+* [openjdk13-binaries](https://github.com/AdoptOpenJDK/openjdk13-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK 13 (HotSpot VM and Eclipse OpenJ9 VM)
 * [openjdk-binaries](https://github.com/AdoptOpenJDK/openjdk-binaries/) - AdoptOpenJDK nightly and release binaries for OpenJDK (Latest) (HotSpot VM and Eclipse OpenJ9 VM)
 
 ### OpenJDK binary repos
@@ -131,8 +134,7 @@ getting a new variant up and running.  Please also see [Platform Costs](https://
 variants with high impact on the build farm will require funding.
 
 1. **OpenJDK HotSpot Mirrors** - GitHub mirrors of OpenJDK forests are created in the AdoptOpenJDK org. For example:
-[openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), [openjdk-jdk9](https://github.com/AdoptOpenJDK/openjdk-jdk9),
-[openjdk-jdk10](https://github.com/AdoptOpenJDK/openjdk-jdk10), [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber). Please open an
+[openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u), [openjdk-jdk11u](https://github.com/AdoptOpenJDK/openjdk-jdk11u). Please open an
 [openjdk-TSC issue](https://github.com/AdoptOpenJDK/openjdk-TSC/issues) if you'd like a new variant added.
     1. **git-hg Jobs Update Mirrors** - Our Jenkins CI runs [git-hg jobs](https://ci.adoptopenjdk.net/view/git-hg/) to regularly
         update those various clones of OpenJDK forests. See their job configurations in Jenkins and the [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build)
@@ -146,7 +148,7 @@ variants with high impact on the build farm will require funding.
 
 Each OpenJDK variant has a canonical branch that is built:
 1. **OpenJDK HotSpot** - The `dev` branch of AdoptOpenJDK contains extra patches over and above `master` (which is the exact clone of the OpenJDK forest).
-`dev` is used to build AdoptOpenjDK binaries
+`dev` is used to build AdoptOpenJDK binaries
 1. **OpenJDK OpenJ9** - Branches such as `openj9-0.8` are used to build OpenJ9 Releases for Java 8 and `openj9` is used to build OpenJ9 for Java 9.
 1. **OpenJDK SAP** - The `sapmachine` branch is used to build SAP for Java 10
 1. **OpenJDK OpenJFX** - TODO
@@ -156,7 +158,7 @@ Each OpenJDK variant has a canonical branch that is built:
 Our Jenkins [Pipelines](https://ci.adoptopenjdk.net/view/Pipelines/) ([source code](https://github.com/AdoptOpenJDK/openjdk-build/tree/master/pipelines)) build
 binaries and then push them through a test pipeline (**NOTE** Test pipeline is skipped for certain unstable combinations).
 
-**NOTE:** Once the Test jobs have stabilised, the pipeline described below will change so that only tested binarues are released to
+**NOTE:** Once the Test jobs have stabilised, the pipeline described below will change so that only tested binaries are released to
 Nightly and Release repos for consumption by the Website and/Or API.  See [The Quality Bar Discussion](https://github.com/AdoptOpenJDK/openjdk-tests/issues/186)
 for details.
 
@@ -199,6 +201,7 @@ from [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) are executed and
     [openjdk10-binaries](https://github.com/AdoptOpenJDK/openjdk10-binaries/),
     [openjdk11-binaries](https://github.com/AdoptOpenJDK/openjdk11-binaries/),
     [openjdk12-binaries](https://github.com/AdoptOpenJDK/openjdk12-binaries/),
+    [openjdk13-binaries](https://github.com/AdoptOpenJDK/openjdk13-binaries/),
     [openjdk-binaries](https://github.com/AdoptOpenJDK/openjdk-binaries/)).
 
 1. **Binaries made available** - Binaries are made available for download via the [website](https://www.adoptopenjdk.net)
