@@ -32,7 +32,7 @@ If you'd like to get involved in AdoptOpenJDK then we recommend you read the [Kn
 
 ## Joining the GitHub Org and Teams
 
-Please raise an [openjdk-TSC issue](https://github.com/AdoptOpenJDK/openjdk-TSC/issues) if you'd like to be added to the 
+Please raise an [openjdk-TSC issue](https://github.com/AdoptOpenJDK/TSC/issues) if you'd like to be added to the 
 AdoptOpenJDK GitHub organisation.
 
 There are some specialist teams within the org:
