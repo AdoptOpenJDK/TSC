@@ -244,7 +244,7 @@ TSC members can nominate new members at any time. Candidates for membership tend
 |![](https://avatars1.githubusercontent.com/u/180840?s=150&v=4) <br> [karianna](https://github.com/karianna) - Martijn Verburg (Microsoft) | ![](https://avatars3.githubusercontent.com/u/20224954?s=150&v=4) <br> [gdams](https://github.com/gdams) - George Adams (Microsoft)  |
 
 
-| | Members <br> (listed alphabetically)| |
+| | Members| |
 |:--:|:--:|:--:|
 | ![](http://oi65.tinypic.com/2vif56q.jpg) <br> [cmdc0de](https://github.com/cmdc0de) - Demetrius Comes (GoDaddy) | ![](https://avatars3.githubusercontent.com/u/20224954?s=100&v=4) <br> [gdams](https://github.com/gdams) - George Adams (Microsoft) | ![](https://avatars3.githubusercontent.com/u/357222?s=100&v=4) <br> [jerboaa](https://github.com/jerboaa) - Severin Gehwolf (Red Hat) | 
 | ![](https://avatars0.githubusercontent.com/u/1615532?s=100&v=4) <br> [johnoliver](https://github.com/johnoliver) - John Oliver (Microsoft) | ![](https://avatars1.githubusercontent.com/u/180840?s=100&v=4) <br> [karianna](https://github.com/karianna) - Martijn Verburg (Microsoft) | ![](https://avatars3.githubusercontent.com/u/2836948?s=100&v=4) <br> [smlambert](https://github.com/smlambert) - Shelley Lambert (IBM) |
