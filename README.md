@@ -51,11 +51,13 @@ changes.)
     * [openjdk-test-tools](https://github.com/AdoptOpenJDK/openjdk-test-tools) - Tools for openjdk testing (not to be confused with [stf](https://github.com/AdoptOpenJDK/stf) which is the tooling for system tests)
     * [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest) - Code and instructions for system and load testing AdoptOpenJDK Binaries
     * [stf](https://github.com/AdoptOpenJDK/stf) - The System Test Framework, a harness for executing [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest)
-    * [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) - A microbenchmarking test framework for Adopt OpenJDK
+    * [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) - A micro-benchmarking test framework for AdoptOpenJDK
+    * [TKG](https://github.com/AdoptOpenJDK/TKG) - TestKitGen (TKG) is a lightweight test harness for bringing together a diverse set of tests or commands under some common behaviour.
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
     * [openjdk-website-next](https://github.com/AdoptOpenJDK/openjdk-website-next) - The Typescript and React re-write for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
         * [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) - A Java client for our API
+    * [openjdk-api-v3](https://github.com/AdoptOpenJDK/openjdk-api-v3) - Code and instructions for v3 of the API - https://api.adoptopenjdk.net/swagger-ui/
     * [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) - Code for pulling the GitHub releases API into the website
     * [openjdk-dashboard](https://github.com/AdoptOpenJDK/openjdk-dashboard) - AdoptOpenJDK Dashboard for download stats at https://dash.adoptopenjdk.net
 
@@ -72,6 +74,8 @@ When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its
 
 * [openjdk-jdk8u](https://github.com/AdoptOpenJDK/openjdk-jdk8u)
 * [openjdk-aarch64-jdk8u](https://github.com/AdoptOpenJDK/openjdk-aarch64-jdk8u)
+* [openjdk-aarch32-jdk8u](https://github.com/AdoptOpenJDK/openjdk-aarch32-jdk8u)
+* [openjdk-jdk8u-jfr-incubator](https://github.com/AdoptOpenJDK/openjdk-jdk8u-jfr-incubator)
 * [openjdk-jdk9u](https://github.com/AdoptOpenJDK/openjdk-jdk9u)
 * [openjdk-jdk10u](https://github.com/AdoptOpenJDK/openjdk-jdk10u)
 * [openjdk-jdk11u](https://github.com/AdoptOpenJDK/openjdk-jdk11u)
