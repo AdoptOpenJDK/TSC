@@ -53,6 +53,7 @@ changes.)
     * [stf](https://github.com/AdoptOpenJDK/stf) - The System Test Framework, a harness for executing [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest)
     * [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) - A micro-benchmarking test framework for AdoptOpenJDK
     * [TKG](https://github.com/AdoptOpenJDK/TKG) - TestKitGen (TKG) is a lightweight test harness for bringing together a diverse set of tests or commands under some common behaviour.
+    * [run-aqa](https://github.com/AdoptOpenJDK/run-aqa) - A Github action that enables the running of the AdoptOpenJDK Quality Assurance (AQA) test suite in Github workflows.
 * [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website) - Code and instructions for https://www.adoptopenjdk.net
     * [openjdk-website-next](https://github.com/AdoptOpenJDK/openjdk-website-next) - The Typescript and React re-write for https://www.adoptopenjdk.net
     * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for https://api.adoptopenjdk.net
