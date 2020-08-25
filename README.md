@@ -41,7 +41,7 @@ changes.)
     * [email](https://github.com/AdoptOpenJDK/email) - For handling all org emails (mailgun)
     * [openjdk-jenkins-helper](https://github.com/AdoptOpenJDK/openjdk-jenkins-helper) - An auto label generator for Jenkins
 * [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) - Code and instructions for building Adopt OpenJDK Binaries
-    * [openjdk-Icedtea-web](https://github.com/AdoptOpenJDK/openjdk-Icedtea-web) - A mirror of Iced tea web, the OSS replacement for Java Web Start and the Browser plugin.
+    * [icedtea-web](https://github.com/AdoptOpenJDK/icedtea-web) - IcedTea-Web, the OSS replacement for Java Web Start.
     * [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) - Scripts for creating Docker images of OpenJDK binaries
     * [openjdk-docker-build-tools](https://github.com/AdoptOpenJDK/openjdk-docker-build-tools) - Helper scripts for [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) 
     * [openjdk-installer](https://github.com/AdoptOpenJDK/openjdk-installer) - Installer files for creating platform packaged OpenJDK binaries
