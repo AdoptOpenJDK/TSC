@@ -3,7 +3,7 @@
 If you'd like to get involved in the TSC or contact them then the best way is to:
 
  1. Sign up to the [AdoptOpenJDK Slack](https://adoptopenjdk.net/slack.html)
- 1. Drop a message in the _getopenjdk_ channel
+ 1. Drop a message in the _general_ channel
 
 # How to Contribute to the TSC Knowledge Base
 
@@ -17,7 +17,7 @@ Requests.  Although straight out Pull Requests are welcome, we prefer that you:
  1. [Review existing issues](https://github.com/AdoptOpenJDK/TSC/issues) to avoid duplication
  1. [Create a new Issue](https://github.com/AdoptOpenJDK/TSC/issues/new)
     1. Please add the TSC project and add a label
- 1. Drop a message in the _getopenjdk_ channel to discuss the issue
+ 1. Drop a message in the _general_ channel to discuss the issue
  1. Make the documentation change and then submit a Pull Request
  
 The pull request will then be reviewed and merged as appropriate
