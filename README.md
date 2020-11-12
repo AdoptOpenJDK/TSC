@@ -96,18 +96,6 @@ When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its
 
 These GitHub Repositories are where builds that pass the pipeline are published to. The API (and subsequently) website poll these repositories to make binaries available.
 
-<<<<<<< HEAD
-* [openjdk8-binaries](https://github.com/AdoptOpenJDK/openjdk8-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 8 (HotSpot VM and Eclipse OpenJ9 VM).
-* [openjdk9-binaries](https://github.com/AdoptOpenJDK/openjdk9-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 9 (HotSpot VM and Eclipse OpenJ9 VM).
-* [openjdk10-binaries](https://github.com/AdoptOpenJDK/openjdk10-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 10 (HotSpot VM and Eclipse OpenJ9 VM).
-* [openjdk11-binaries](https://github.com/AdoptOpenJDK/openjdk11-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 11 (HotSpot VM and Eclipse OpenJ9 VM).
-* [openjdk12-binaries](https://github.com/AdoptOpenJDK/openjdk12-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 12 (HotSpot VM and Eclipse OpenJ9 VM).
-* [openjdk13-binaries](https://github.com/AdoptOpenJDK/openjdk13-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 13 (HotSpot VM and Eclipse OpenJ9 VM).
-* [openjdk14-binaries](https://github.com/AdoptOpenJDK/openjdk14-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 14 (HotSpot VM and Eclipse OpenJ9 VM).
-* [openjdk15-binaries](https://github.com/AdoptOpenJDK/openjdk15-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 15 (HotSpot VM and Eclipse OpenJ9 VM).
-* [openjdk16-binaries](https://github.com/AdoptOpenJDK/openjdk16-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 16 (HotSpot VM and Eclipse OpenJ9 VM).
-* [openjdk-binaries](https://github.com/AdoptOpenJDK/openjdk-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK.
-=======
 * [openjdk8-binaries](https://github.com/AdoptOpenJDK/openjdk8-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 8 (HotSpot VM and Eclipse OpenJ9 VM)
 * [openjdk9-binaries](https://github.com/AdoptOpenJDK/openjdk9-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 9 (HotSpot VM and Eclipse OpenJ9 VM)
 * [openjdk10-binaries](https://github.com/AdoptOpenJDK/openjdk10-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 10 (HotSpot VM and Eclipse OpenJ9 VM)
@@ -118,7 +106,6 @@ These GitHub Repositories are where builds that pass the pipeline are published 
 * [openjdk15-binaries](https://github.com/AdoptOpenJDK/openjdk15-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 15 (HotSpot VM and Eclipse OpenJ9 VM)
 * [openjdk16-binaries](https://github.com/AdoptOpenJDK/openjdk16-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 16 (HotSpot VM and Eclipse OpenJ9 VM)
 * [openjdk-binaries](https://github.com/AdoptOpenJDK/openjdk-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK (Latest) (HotSpot VM and Eclipse OpenJ9 VM)
->>>>>>> df95a54 (Finish textual updates)
 
 ### OpenJDK binary repositories
 
@@ -134,13 +121,6 @@ These GitHub Repositories are where builds from Alibaba's Dragonwell distributio
 * [openjdk8-dragonwell-binaries](https://github.com/AdoptOpenJDK/openjdk8-dragonwell-binaries/) - OpenJDK nightly and release binaries for OpenJDK 8 (HotSpot VM).
 * [openjdk11-dragonwell-binaries](https://github.com/AdoptOpenJDK/openjdk11-dragonwell-binaries/) - OpenJDK nightly and release binaries for OpenJDK 11 (HotSpot VM).
 
-### Dragonwell OpenJDK binary repositories
-
-These GitHub Repositories are where builds from Alibaba's Dragonwell distribution are published to. The API (and subsequently) website poll these repositories to make binaries available.
-
-* [openjdk8-dragonwell-binaries](https://github.com/AdoptOpenJDK/openjdk8-dragonwell-binaries/) - OpenJDK nightly and release binaries for OpenJDK 8 (HotSpot VM)
-* [openjdk11-dragonwell-binaries](https://github.com/AdoptOpenJDK/openjdk11-dragonwell-binaries/) - OpenJDK nightly and release binaries for OpenJDK 11 (HotSpot VM)
-
 ### Private repositories
 
 Due to security or licensing concerns the following repositories are private.  Please raise an issue on the [Infrastructure Project](https://github.com/AdoptOpenJDK/openjdk-infrastructure) if you think you need access.
@@ -151,12 +131,6 @@ Due to security or licensing concerns the following repositories are private.  P
 * [security](https://github.com/AdoptOpenJDK/security) - For the security team.
 * [openjdk-security](https://github.com/AdoptOpenJDK/openjdk-security) - A private repo for (adopt)openjdk vulnerability investigations.
 * [openjdk-website-staging](https://github.com/AdoptOpenJDK/openjdk-staging-webiste) - for staging website PR's.
-
-### Java Mission Control Support
-
-We support the building of Java Mission Control (JMC).
-
-* [openjdk-jmc-overrides](https://github.com/AdoptOpenJDK/openjdk-jmc-overrides) - Contains the AdoptOpenJDK specific source code overrides and build pipeline script for the Java Mission Control project.
 
 ### Java Mission Control Support
 
