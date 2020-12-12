@@ -60,6 +60,7 @@ changes.)
   * [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) - Code and instructions for the [v1 and v2 (Both Deprecated) APIs](https://api.adoptopenjdk.net).
     * [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) - A Java client for our API.
   * [openjdk-api-v3](https://github.com/AdoptOpenJDK/openjdk-api-v3) - Code and instructions for our current [v3 API](https://api.adoptopenjdk.net/swagger-ui/).
+  * [openjdk-api-graphql](https://github.com/AdoptOpenJDK/openjdk-api-graphql) - The GraphQL interface that both V2 and V3 APIs use.
   * [openjdk-github-release](https://github.com/AdoptOpenJDK/openjdk-github-release) - previously known as `openjdk-website-backend`. Code for pulling the GitHub releases API into the website.
   * [openjdk-dashboard](https://github.com/AdoptOpenJDK/openjdk-dashboard) - [AdoptOpenJDK Dashboard](https://dash.adoptopenjdk.net) for download stats.
   * [openjdk-dashboard-v2](https://github.com/AdoptOpenJDK/openjdk-dashboard-v2) - The next gen download dashboard.
