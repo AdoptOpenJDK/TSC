@@ -21,20 +21,14 @@ See [https://www.adoptopenjdk.net](https://www.adoptopenjdk.net) for in depth de
 
 ## Dependent Projects
 
-These projects are located in the following repositories in rough order of importance with regards to understanding how the build farm is put together and works.  Each repository maintains its own set of issues, pull requests and documentation (edit the [Image Source](https://docs.google.com/drawings/d/1daX4YkvpyHOy0aaA80ECC2vKTjOVIUATKiJM4QOw7hI/edit) at Google and export to make
-changes.)
+AdoptOpenJDK is a vast undertaking and has numerous GitHub repositories where the work gets done.
 
-![Dependent Projects](images/Adopt_Build_Farm_Repo_Relationships.png)
+### Core Projects
 
-* [Technical Steering Committee (TSC)](https://github.com/AdoptOpenJDK/TSC) - The Technical Steering Committee and Knowledge Base starting point.
-  * [TSC-confidential](https://github.com/AdoptOpenJDK/TSC-confidential) - To hold any confidential information for the TSC, e.g. Sponsorship Agreements.
-  * [security](https://github.com/AdoptOpenJDK/security) - A private repo for the security team.
-    * [moderation](https://github.com/AdoptOpenJDK/moderation) - A private repo for moderation requests.
-    * [openjdk-security](https://github.com/AdoptOpenJDK/openjdk-security) - A private repo for (adopt)openjdk vulnerability investigations.
-    * [secrets](https://github.com/AdoptOpenJDK/secrets) - A private repo for secrets.
-  * [buzz](https://github.com/AdoptOpenJDK/buzz) - Community Outreach and Sponsors.
-  * [blog](https://github.com/AdoptOpenJDK/blog) - Source for our [public blog](https://blog.adoptopenjdk.net).
-  * [openjdk-support](https://github.com/AdoptOpenJDK/openjdk-support) - For end-user problems reported with our binary distributions.
+These projects are located in the following repositories in rough order of importance with regards to understanding how the build farm is put together and works. Each repository maintains its own set of issues, pull requests and documentation (edit the [Image Source](https://docs.google.com/drawings/d/1daX4YkvpyHOy0aaA80ECC2vKTjOVIUATKiJM4QOw7hI/edit) and export to make changes.)
+
+![Core Projects](images/Adopt_Build_Farm_Core_Repo_Relationships.png)
+
 * [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) - Infrastructure as Code and documentation for build farm hosts.
   * [email](https://github.com/AdoptOpenJDK/email) - For handling all org emails (mailgun).
   * [openjdk-jenkins-helper](https://github.com/AdoptOpenJDK/openjdk-jenkins-helper) - An auto label generator for Jenkins.
@@ -65,14 +59,28 @@ changes.)
   * [openjdk-dashboard](https://github.com/AdoptOpenJDK/openjdk-dashboard) - [AdoptOpenJDK Dashboard](https://dash.adoptopenjdk.net) for download stats.
   * [openjdk-dashboard-v2](https://github.com/AdoptOpenJDK/openjdk-dashboard-v2) - The next gen download dashboard.
 
-### AdoptOpenJDK Source and Distribution Repositories
+### Support and Admin Projects
 
-The following diagram lists the source and distribution repositories for AdoptOpenJDK (edit the
+These projects are critical to maintaining security, supporting our user ecosystem, and for the internal running of the project (edit the [Image Source](https://docs.google.com/drawings/d/1q5Nzy1zlQnmO6B3BJaGFAA-9Y8xLmFJxD-8w7BC5ZVw/edit) at Google and export to make changes.)
+
+![Extra Projects](images/Adopt_Build_Farm_Extra_Repo_Relationships.png)
+
+* [Technical Steering Committee (TSC)](https://github.com/AdoptOpenJDK/TSC) - The Technical Steering Committee and Knowledge Base starting point.
+  * [TSC-confidential](https://github.com/AdoptOpenJDK/TSC-confidential) - To hold any confidential information for the TSC, e.g. Sponsorship Agreements.
+  * [security](https://github.com/AdoptOpenJDK/security) - A private repo for the security team.
+    * [moderation](https://github.com/AdoptOpenJDK/moderation) - A private repo for moderation requests.
+    * [openjdk-security](https://github.com/AdoptOpenJDK/openjdk-security) - A private repo for (adopt)openjdk vulnerability investigations.
+    * [secrets](https://github.com/AdoptOpenJDK/secrets) - A private repo for secrets.
+  * [openjdk-support](https://github.com/AdoptOpenJDK/openjdk-support) - For end-user problems reported with our binary distributions.
+    * [buzz](https://github.com/AdoptOpenJDK/buzz) - Community Outreach and Sponsors.
+    * [blog](https://github.com/AdoptOpenJDK/blog) - Source for our [public blog](https://blog.adoptopenjdk.net).
+
+### AdoptOpenJDK Source Repositories
+
+The following diagram lists the source repositories for AdoptOpenJDK (edit the
 [Image Source](https://docs.google.com/drawings/d/1h2YzP1zAUsYku8sFbx5xP2mTe1DFVx-6NOHzQ3Hso5w/edit) at Google and export to make changes.)
 
-![Source and Distribution Repositories](images/Adopt_Build_Farm_Source_and_Distro_Repos.png)
-
-### Clones of OpenJDK Forests
+![Source Repositories](images/Adopt_Build_Farm_Source_Repos.png)
 
 When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its own patches then we have a clone of that source:
 
@@ -86,6 +94,7 @@ When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its
 * [openjdk-jdk13u](https://github.com/AdoptOpenJDK/openjdk-jdk13u)
 * [openjdk-jdk14u](https://github.com/AdoptOpenJDK/openjdk-jdk14u)
 * [openjdk-jdk15u](https://github.com/AdoptOpenJDK/openjdk-jdk15u)
+* [openjdk-jdk16](https://github.com/AdoptOpenJDK/openjdk-jdk16)
 * [openjdk-jdk](https://github.com/AdoptOpenJDK/openjdk-jdk)
 * [openjdk-jfx](https://github.com/AdoptOpenJDK/openjdk-jfx)
 * [openjdk-amber](https://github.com/AdoptOpenJDK/openjdk-amber)
@@ -94,7 +103,10 @@ When an OpenJDK variant is mercurial based or AdoptOpenJDK needs to maintain its
 
 ### AdoptOpenJDK binary repositories
 
-These GitHub Repositories are where builds that pass the pipeline are published to. The API (and subsequently) website poll these repositories to make binaries available.
+The following diagram lists the binary repositories for AdoptOpenJDK (edit the
+[Image Source](https://docs.google.com/drawings/d/1iJHzhLJ-cEL6mktWYzpWAYHHM0vOILT9ri4QYbsnGIg/edit) at Google and export to make changes.). These GitHub Repositories are where builds that pass the pipeline are published to. The API (and subsequently) website poll these repositories to make binaries available.
+
+![Distribution Repositories](images/Adopt_Build_Farm_Binary_Repos.png)
 
 * [openjdk8-binaries](https://github.com/AdoptOpenJDK/openjdk8-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 8 (HotSpot VM and Eclipse OpenJ9 VM).
 * [openjdk9-binaries](https://github.com/AdoptOpenJDK/openjdk9-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 9 (HotSpot VM and Eclipse OpenJ9 VM).
@@ -107,7 +119,7 @@ These GitHub Repositories are where builds that pass the pipeline are published 
 * [openjdk16-binaries](https://github.com/AdoptOpenJDK/openjdk16-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK 16 (HotSpot VM and Eclipse OpenJ9 VM).
 * [openjdk-binaries](https://github.com/AdoptOpenJDK/openjdk-binaries/) - AdoptOpenJDK nightly and release binaries for AdoptOpenJDK (Latest) (HotSpot VM and Eclipse OpenJ9 VM).
 
-### OpenJDK binary repositories
+### Upstream OpenJDK binary repositories
 
 These GitHub Repositories are where builds from the OpenjDK update projects (led by Red Hat) are published to. The API (and subsequently) website poll these repositories to make binaries available.
 
