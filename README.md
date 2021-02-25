@@ -15,7 +15,7 @@ The AdoptOpenJDK Build Farm is three things:
 
 1. **A Repository of professionally built, tested and supported OpenJDK binaries** - A place for end users to download professionally built and tested OpenJDK binaries, see [Support](https://adoptopenjdk.net/support.html) for our full support details.
 1. **A Community of builders** - A place where those who build and test OpenJDK come together to share common code and practices.
-1. **Infrastructure as Code** - To host, build, test and deploy variants of [OpenJDK](http://openjdk.java.net) (aka Java)! This infrastructure as code is designed to be usable by any person or organisation wishing to build a derivative build farm or parts of one.
+1. **Infrastructure as Code** - To host, build, test and deploy variants of [OpenJDK](http://openjdk.java.net) (aka Java)! This infrastructure as code is based around ansible and is designed to be usable by any person or organisation wishing to build a derivative build farm or parts of one.
 
 See [https://www.adoptopenjdk.net](https://www.adoptopenjdk.net) for in depth details of the motivation, who's involved, the sponsors and much more!
 
@@ -203,9 +203,8 @@ for details.
 
 Note that other OpenJDK binaries (such as the [openjdk8-upstream-binaries](https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/) and [openjdk11-upstream-binaries](https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/)) can be put through pipelines entering at this Test phase.
 
-[Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the
-[Supported Test Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and
-[openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
+Tests are run on the
+[Supported Test Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
 
 1. **Builds are tested** - The tests in [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) are executed and tests results are posted to TODO.
 Tests include, but are not limited to the jtreg tests that come with OpenJDK itself.
@@ -225,7 +224,7 @@ TODO - Binaries are signed.
 
 **NOTE** Future versions of this workflow will show the status of testing and meta data about how the binary was built.
 
-1. **Binaries are deployed** - Using the [OpenJDK Release Tool](https://ci.adoptopenjdk.net/view/Tooling/job/openjdk_release_tool/) (from the
+1. **Binaries are deployed** - Using the [OpenJDK Release Tool](https://ci.adoptopenjdk.net/job/build-scripts/job/release/job/refactor_openjdk_release_tool/) (from the
 [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) project) in order to:
     1. deploy them to the various binary repositories:
     ([openjdk8-binaries](https://github.com/AdoptOpenJDK/openjdk8-binaries/),
