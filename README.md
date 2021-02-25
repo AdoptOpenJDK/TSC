@@ -204,7 +204,7 @@ sends the build jobs to the Jenkins followers based on a tagging system configur
 
 Note that other OpenJDK binaries (such as the [openjdk8-upstream-binaries](https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/) and [openjdk11-upstream-binaries](https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/)) can be put through pipelines entering at this Test phase.
 
-[Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the
+Tests are run on the
 [Supported Test Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader
 sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and
 [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
