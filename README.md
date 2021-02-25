@@ -223,7 +223,7 @@ from [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) are executed and
 
 **NOTE** Future versions of this workflow will show the status of testing and meta data about how the binary was built.
 
-1. **Binaries are deployed** - Using the [OpenJDK Release Tool](https://ci.adoptopenjdk.net/view/Tooling/job/openjdk_release_tool/) (from the
+1. **Binaries are deployed** - Using the [OpenJDK Release Tool](https://ci.adoptopenjdk.net/job/build-scripts/job/release/job/refactor_openjdk_release_tool/) (from the
 [openjdk-website-backend](https://github.com/AdoptOpenJDK/openjdk-website-backend) project) in order to:
     1. deploy them to the various binary repositories:
     ([openjdk8-binaries](https://github.com/AdoptOpenJDK/openjdk8-binaries/),
