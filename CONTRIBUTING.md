@@ -12,7 +12,7 @@ The TSC Knowledge Base is designed to be a gateway (or index if you will) into t
 For the TSC, we use the the repository [Project](https://github.com/AdoptOpenJDK/TSC/projects/1) to manage Issues and Pull Requests.  Although straight out Pull Requests are welcome, we prefer that you:
 
  1. [Review existing issues](https://github.com/AdoptOpenJDK/TSC/issues) to avoid duplication
- 1. [Create a new Issue](https://github.com/AdoptOpenJDK/TSC/issues/new) - Please add the TSC project and add a label
+ 1. [Create a new Issue](https://github.com/AdoptOpenJDK/TSC/issues/new)
  1. Drop a message in the _general_ channel to discuss the issue
  1. Make the documentation change and then submit a Pull Request
 

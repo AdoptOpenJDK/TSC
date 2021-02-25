@@ -197,16 +197,14 @@ for details.
 
 #### 3.1 Build
 
-[Builds](https://ci.adoptopenjdk.net/) are run on the [Supported Platforms](https://docs.google.com/spreadsheets/d/1T_sYpMe1y2cSdiP83HA2VWnTH6B-Nbl3ppss0gEpACc/edit?usp=sharing). The Jenkins leader
-sends the build jobs to the Jenkins followers based on a tagging system configured in the Jenkins jobs, e.g. `centos6&&x64&&build`. See [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) and [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
+[Builds](https://ci.adoptopenjdk.net/) are run on the [Supported Platforms](https://docs.google.com/spreadsheets/d/1T_sYpMe1y2cSdiP83HA2VWnTH6B-Nbl3ppss0gEpACc/edit?usp=sharing). The Jenkins leader sends the build jobs to the Jenkins followers based on a tagging system configured in the Jenkins jobs, e.g. `centos6&&x64&&build`. See [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) and [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
 
 #### 3.2 Test
 
 Note that other OpenJDK binaries (such as the [openjdk8-upstream-binaries](https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/) and [openjdk11-upstream-binaries](https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/)) can be put through pipelines entering at this Test phase.
 
 [Tests](https://ci.adoptopenjdk.net/view/OpenJDK%20tests/) are run on the
-[Supported Test Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader
-sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and
+[Supported Test Platforms](https://docs.google.com/spreadsheets/d/1X4CCfvMoCgEavRbvejHrTvPnqj37MB-_C6LB6b8Akkc/edit?usp=sharing). The Jenkins leader sends the test jobs to the Jenkins followers based on a similar tagging system to build. See [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) and
 [openjdk-infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) for details.
 
 1. **Builds are tested** - The tests in [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) are executed and tests results are posted to TODO.
@@ -217,7 +215,11 @@ from [openjdk-systemtests](https://github.com/AdoptOpenJDK/openjdk-systemtests) 
 1. **Builds are performance tested** - [Performance Tests](https://ci.adoptopenjdk.net/view/Test_perf/)
 from [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) are executed and test results are posted to TODO
 
-#### 3.3 Deploy Binaries
+#### 3.3 Sign Binaries
+
+TODO - Binaries are signed.
+
+#### 3.4 Deploy Binaries
 
 **TODO**: We're missing the SAP and OpenJFK deployments here.
 
@@ -236,7 +238,7 @@ from [bumblebench](https://github.com/AdoptOpenJDK/bumblebench) are executed and
     [openjdk15-binaries](https://github.com/AdoptOpenJDK/openjdk15-binaries/),
     [openjdk-binaries](https://github.com/AdoptOpenJDK/openjdk-binaries/)).
 
-1. **Binaries made available** - Binaries are made available for download via the [website](https://www.adoptopenjdk.net) and [api](https://api.adoptopenjdk.net) gateway. See [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website), [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) and [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) projects for more details.
+1. **Binaries made available** - Binaries are made available for download via the [website](https://www.adoptopenjdk.net) and [api](https://api.adoptopenjdk.net) gateway. See [openjdk-website](https://github.com/AdoptOpenJDK/openjdk-website), [openjdk-api](https://github.com/AdoptOpenJDK/openjdk-api) and [openjdk-api-java-client](https://github.com/AdoptOpenJDK/openjdk-api-java-client) projects for more details. We also make the builds available through DockerHub and our own unofficial docker repositories, see [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) for details.
 
 # The TSC
 
