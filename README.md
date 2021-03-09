@@ -33,7 +33,8 @@ These projects are located in the following repositories in rough order of impor
   * [email](https://github.com/AdoptOpenJDK/email) - For handling all org emails (mailgun).
   * [openjdk-jenkins-helper](https://github.com/AdoptOpenJDK/openjdk-jenkins-helper) - An auto label generator for Jenkins.
 * [openjdk-build](https://github.com/AdoptOpenJDK/openjdk-build) - Code and instructions for building Adopt OpenJDK Binaries.
-  * [IcedTea-Web](https://github.com/AdoptOpenJDK/IcedTea-Web) - IcedTea-Web, the OSS replacement for (most of) Java Web Start.
+  * [openjdk-mirror-scripts](https://github.com/AdoptOpenJDK/openjdk-mirror-scripts) - Our scripts to mirror OpenJDK source from Mercurial or GitHub (aka project Skara).
+  * [ci-jenkins-pipelines](https://github.com/AdoptOpenJDK/ci-jenkins-pipelines) - The Jenkins Pipelines scripts, used by Adopt and can be used by 3rd parties.
   * [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker) - Scripts for creating Docker images of OpenJDK binaries.
   * [openjdk-docker-build-tools](https://github.com/AdoptOpenJDK/openjdk-docker-build-tools) - Helper scripts for [openjdk-docker](https://github.com/AdoptOpenJDK/openjdk-docker).
   * [openjdk-installer](https://github.com/AdoptOpenJDK/openjdk-installer) - Installer files for creating platform packaged OpenJDK binaries.
@@ -41,6 +42,7 @@ These projects are located in the following repositories in rough order of impor
   * [jdk-api-diff](https://github.com/AdoptOpenJDK/jdk-api-diff) - A diff tool that reports what API changes there are between versions.
   * [build-jdk](https://github.com/AdoptOpenJDK/build-jdk) - Github action for building JDKs that utilizes the build scripts from the openjdk-build repo.
   * [install-jdk](https://github.com/AdoptOpenJDK/install-jdk) - Github action that installs SDKs served up by the AdoptOpenJDK API.
+  * [IcedTea-Web](https://github.com/AdoptOpenJDK/IcedTea-Web) - IcedTea-Web, the OSS replacement for (most of) Java Web Start.
 * [openjdk-tests](https://github.com/AdoptOpenJDK/openjdk-tests) - Instructions for all testing at AdoptOpenJDK, code for app, performance and regression testing of AdoptOpenJDK Binaries and CI test automation scripts.
   * [openjdk-test-tools](https://github.com/AdoptOpenJDK/openjdk-test-tools) - The home for Test Results Summary Service (TRSS) (not to be confused with [stf](https://github.com/AdoptOpenJDK/stf) which is the tooling for system tests).
   * [openjdk-systemtest](https://github.com/AdoptOpenJDK/openjdk-systemtest) - Code and instructions for system and load testing AdoptOpenJDK Binaries.
