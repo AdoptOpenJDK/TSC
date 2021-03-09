@@ -1,3 +1,9 @@
 # IntelliJ IDE
 .idea/
+
+# VS Code IDE
+.vscode/
+
+# Mac OS X image indexing
+.DS_Store
 */.DS_Store
