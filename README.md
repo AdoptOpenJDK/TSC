@@ -265,7 +265,7 @@ TSC members can nominate new members at any time. Candidates for membership tend
 
 | Director | Chair |
 |:--:|:--:|
-|![karianna avatar](https://avatars1.githubusercontent.com/u/180840?s=150&v=4) <br> [karianna](https://github.com/karianna) - Martijn Verburg (Microsoft) | ![gdams avatar](https://avatars3.githubusercontent.com/u/20224954?s=150&v=4) <br> [gdams](https://github.com/gdams) - George Adams (Microsoft)  |
+|![karianna avatar](https://avatars1.githubusercontent.com/u/180840?s=150&v=4) <br> [karianna](https://github.com/karianna) - Martijn Verburg (Microsoft) | ![gdams avatar](https://avatars3.githubusercontent.com/u/20224954?s=150&v=4) <br> [gdams](https://github.com/gdams) - George Adams (Microsoft) |
 
 | | Members| |
 |:--:|:--:|:--:|
