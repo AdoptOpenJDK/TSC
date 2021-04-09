@@ -15,10 +15,22 @@ One Week Prior to Release:
 
 Release Week Checklist:
 - [ ] **Add website banner** (_automate_* via github workflow in website repository) - Announce that we target releases to be available within 48 hours of the GA tags being available
-- [ ] **Launch build pipelines** for each version being released [(as per release doc](https://github.com/AdoptOpenJDK/openjdk-build/blob/master/RELEASING.md#steps-for-every-version)) once release tags are available via [launch page](https://ci.adoptopenjdk.net/job/build-scripts/job/openjdk8-pipeline/build) in Jenkins.  Provide links in this issue to each version's pipeline build(s). There may be multiple pipelines per version if primary and secondary platforms are separated to expedite the release.
-  - jdk8 pipeline(s): 
+- [ ] **Launch build pipelines** for each version being released [(as per release doc](https://github.com/AdoptOpenJDK/openjdk-build/blob/master/RELEASING.md#steps-for-every-version)) once release tags are available via [launch page](https://ci.adoptopenjdk.net/job/build-scripts/job/openjdk8-pipeline/build) in Jenkins.  Provide links in this issue to each version's pipeline build(s). There may be multiple pipelines per version if primary and secondary platforms are separated to expedite the release.  In some cases,  where there are unforeseen configuration or infrastructure issues, reruns may be needed.
+  - jdk8 pipeline(s):
+    - primary jdk8 pipeline:
+      - rerun(s):
+    - secondary jdk8 pipeline: 
+      - reruns(s):
   - jdk11 pipeline(s): 
+    - primary jdk11 pipeline:
+      - rerun(s):
+    - secondary jdk11 pipeline:
+      - rerun(s):
   - jdkxx pipeline(s): 
+    - primary jdkxx pipeline:
+      - rerun(s):
+    - secondary jdkxx pipeline:
+      - rerun(s):
 - [ ] **Summarize test results**.  Find each launched build pipeline in [TRSS](https://trss.adoptopenjdk.net/) to view a summary of test results.  Can use the Release Summary Report feature in TRSS to generate a summary of failures, history and possible issues in markup format to be added to this issue as a comment. 
 - [ ] **Triage** each build and test failure in the release summary report (following the [Triage guidelines](https://github.com/AdoptOpenJDK/openjdk-tests/blob/master/doc/Triage.md)) and determine blocking or non-blocking.  
   - jdk8 triage summary:
