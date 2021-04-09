@@ -22,6 +22,7 @@ Everyone participating in a release, including the release champion are requeste
 One Week Prior to Release:
 - [ ] **Release Champion named** whose responsibility is to ensure every item in this checklist gets completed
 - [ ] **Disable nightly testing** to free up resources and ensure no competing jobs during release week
+- [ ] **Update list of CA certificates** if required, following this [security/README](https://github.com/AdoptOpenJDK/openjdk-build/blob/master/security/README.md)
 - [ ] **Run a trial release pipeline** to ensure less surprises on release day (typically against a milestone build)
 
 -------
