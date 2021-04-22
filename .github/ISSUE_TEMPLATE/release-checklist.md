@@ -56,7 +56,7 @@ Release Week Checklist:
 - [ ] **Verify binaries published successfully** to github releases repo and website (_automate_*, this could also be an automated test)
 - [ ] **Update support page** (_automate_* github workflow to create a PR to update [support.handlebars](https://github.com/AdoptOpenJDK/openjdk-website/blob/master/src/handlebars/support.handlebars))
 - [ ] **Update release notes** (_automate_* - github workflow to create update for [release notes page](https://adoptopenjdk.net/release_notes.html))
-- [ ] **Run homebrew-cask_updater** (via [Jenkins homebrew-cask_updater job link](https://ci.adoptopenjdk.net/job/homebrew-cask_updater/)) once binaries published successfully (this can be automated / triggered by a test for published artifacts)
+- [ ] **Run homebrew-cask_updater** (via [GitHub actions Updater job](https://github.com/AdoptOpenJDK/homebrew-openjdk/actions/workflows/updater.yml)) once binaries published successfully (this can be automated / triggered by a test for published artifacts)
 - [ ] **Trigger linux installers pipeline** currently it is part of the build pipelines (will eventually be updated to run independently)
 - [ ] **Publicize the release** via Slack #release channel and Twitter (can be partially automated)
 - [ ] **Trigger docker images pipeline** and confirm they are published correctly (see [openjdk-docker/build_process doc](https://github.com/AdoptOpenJDK/openjdk-docker/build_process.md) for details)
