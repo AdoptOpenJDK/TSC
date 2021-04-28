@@ -21,6 +21,7 @@ Everyone participating in a release, including the release champion are requeste
 
 One Week Prior to Release:
 - [ ] **Release Champion named** whose responsibility is to ensure every item in this checklist gets completed
+- [ ] **Declare code freeze** to ensure stability of build systems and infrastructure during release process
 - [ ] **Disable nightly testing** to free up resources and ensure no competing jobs during release week
 - [ ] **Update list of CA certificates** if required, following this [security/README](https://github.com/AdoptOpenJDK/openjdk-build/blob/master/security/README.md)
 - [ ] **Run a trial release pipeline** to ensure less surprises on release day (typically against a milestone build)
@@ -60,4 +61,6 @@ Release Week Checklist:
 - [ ] **Trigger linux installers pipeline** currently it is part of the build pipelines (will eventually be updated to run independently)
 - [ ] **Publicize the release** via Slack #release channel and Twitter (can be partially automated)
 - [ ] **Trigger docker images pipeline** and confirm they are published correctly (see [openjdk-docker/build_process doc](https://github.com/AdoptOpenJDK/openjdk-docker/build_process.md) for details)
+- [ ] **Declare code freeze end** opening up the code for further development
 - [ ] **Declare the release complete** and close this issue
+
