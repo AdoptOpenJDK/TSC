@@ -60,7 +60,8 @@ Release Week Checklist:
 - [ ] **Run homebrew-cask_updater** (via [GitHub actions Updater job](https://github.com/AdoptOpenJDK/homebrew-openjdk/actions/workflows/updater.yml)) once binaries published successfully (this can be automated / triggered by a test for published artifacts)
 - [ ] **Trigger linux installers pipeline** currently it is part of the build pipelines (will eventually be updated to run independently)
 - [ ] **Publicize the release** via Slack #release channel and Twitter (can be partially automated)
-- [ ] **Trigger docker images pipeline** and confirm they are published correctly (see [openjdk-docker/build_process doc](https://github.com/AdoptOpenJDK/openjdk-docker/build_process.md) for details)
+- [ ] **Trigger docker images pipeline** via the [GitHub Actions job](https://github.com/AdoptOpenJDK/openjdk-docker/actions/workflows/updater.yml). Simply click Run Workflow, keep the branch as Master and click `Run Workflow`. This updater job checks the API and updates the relevant dockerfiles. A Pull Request is then created by the adoptopenjdk-bot account which will need merging once all the CI tests pass.
+- [ ]  **Update Official Docker Images** Once the dockerfiles have been updated in the previous step you can run the `dockerhub_doc_config_update.sh` script. This will create a file called adoptopenjdk which will need to be copy and pasted into the [official adoptopenjdk config](https://github.com/docker-library/official-images/blob/master/library/adoptopenjdk) (example PR https://github.com/docker-library/official-images/pull/10083)
 - [ ] **Declare code freeze end** opening up the code for further development
 - [ ] **Declare the release complete** and close this issue
 
